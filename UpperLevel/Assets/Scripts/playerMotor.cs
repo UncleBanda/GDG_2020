@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerMotor : MonoBehaviour
 {
-    private CharacterControl controller;
+    private CharacterController controller;
 
     private float verticalVelocity;
     private float gravity = 7.0f;
@@ -14,15 +14,15 @@ public class playerMotor : MonoBehaviour
 
     void Start()
     {
-        controller = GetComponent<CharacterControl>();
+        controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-      if (controller.IsGrounded())
+      if (controller.isGrounded)
         {
             verticalVelocity = -gravity * Time.deltaTime;
-
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 verticalVelocity = jumpForce;
@@ -36,7 +36,8 @@ public class playerMotor : MonoBehaviour
 
         Vector3 moveVector = Vector3.zero;
         moveVector.y = verticalVelocity;
+        moveVector.x = Input.GetAxis("Horizontal") * 8f;
 
-        controller.MoveUp(moveVector);
+        controller.Move(moveVector*Time.deltaTime);
     }
 }

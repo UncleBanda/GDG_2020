@@ -1,23 +1,16 @@
-﻿<Properties StartupConfiguration="{3A721D74-4EBD-8604-83D9-144918109D90}|">
+﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharacterControl.cs">
     <Files>
       <File FileName="Assets/Scripts/CharacterControl.cs" Line="53" Column="5" />
-      <File FileName="Assets/Scripts/playerMotor.cs" Line="20" Column="35" />
+      <File FileName="Assets/Scripts/playerMotor.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UpperLevel" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="FSP" expanded="True">
-                <Node name="MAST" expanded="True">
-                  <Node name="Scripts" expanded="True">
-                    <Node name="Prefabs" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="CharacterControl.cs" selected="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True" selected="True" />
               </Node>
             </Node>
           </Node>

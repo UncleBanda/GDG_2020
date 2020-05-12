@@ -9,6 +9,7 @@ public class CharacterControl : MonoBehaviour
 {
     static Animator animator;
     private Collider coll;
+    //public GameObject princess;
 
     public float speed = 8f;
 
@@ -51,7 +52,7 @@ public class CharacterControl : MonoBehaviour
         {
 			if (IsGrounded())
 			{
-				animator.SetTrigger("isJumping");
+				//animator.SetTrigger("isJumping");
 			}
         }
         //anim.SetFloat("Speed", Input.GetAxis("Horizontal"));
@@ -61,6 +62,12 @@ public class CharacterControl : MonoBehaviour
     //metthod that will look below our character and see if there is a collider
     public bool IsGrounded()
 	{
+        Debug.Log(Physics.Raycast(transform.position, Vector3.down, coll.bounds.extents.y + 0.1f));
         return Physics.Raycast(transform.position, Vector3.down, coll.bounds.extents.y + 0.1f);
 	}
+
+    public void MoveUp(Vector3 moveVector)
+    {
+        transform.Translate(moveVector * Time.deltaTime);
+    }
 }

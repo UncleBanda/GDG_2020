@@ -55,7 +55,7 @@ public class playerMotor : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")  && IsGrounded())
         {
             animator.SetTrigger("isJumping");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);

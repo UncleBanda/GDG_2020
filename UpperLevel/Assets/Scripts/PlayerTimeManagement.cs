@@ -36,7 +36,6 @@ public class PlayerTimeManagement : MonoBehaviour
         {
             timemanager.ContinueTime();
 
-
         }
 
         if (timemanager.TimeIsStopped)
@@ -48,11 +47,16 @@ public class PlayerTimeManagement : MonoBehaviour
             }
             else
             {
-                currentAbilityValue = 0;
-
+                
                 timemanager.ContinueTime();
 
             }
+        }
+        if (timemanager.TimeIsStopped==false&&currentAbilityValue<10)
+        {
+
+            currentAbilityValue = currentAbilityValue+ (Time.deltaTime*0.25f);
+            abilityBar.SetValue(currentAbilityValue);
         }
     }
 }

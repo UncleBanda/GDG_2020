@@ -6,6 +6,8 @@ using UnityEngine;
 public class playerMotor : MonoBehaviour
 {
     private CharacterController controller;
+    private float saltoTime=1f;
+    private bool salta=false;
 
     //private float verticalVelocity;
     //private float gravity = 7.0f;
@@ -34,6 +36,17 @@ public class playerMotor : MonoBehaviour
         float translation = horizontal * speed * Time.deltaTime;
         transform.Translate(Vector3.forward * Mathf.Abs(translation));
 
+        if (salta == true)
+        {
+            saltoTime -= Time.deltaTime;
+        }
+
+        if (saltoTime < 0)
+        {
+            salta = false;
+            saltoTime = 1f;
+        }
+
         // da considerare per miglioramenti al movimento
         //rb.AddForce(Vector3.forward * horizontal * speed);
 
@@ -55,10 +68,11 @@ public class playerMotor : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-        if (Input.GetButtonDown("Jump")  && IsGrounded())
+        if (Input.GetButtonDown("Jump")  && IsGrounded() && salta==false)
         {
             animator.SetTrigger("isJumping");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            salta = true;
         }              
          
         //parte vecchia con il character controller 

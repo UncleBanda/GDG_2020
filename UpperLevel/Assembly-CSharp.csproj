@@ -105,6 +105,7 @@
      <Compile Include="Assets\Scripts\TimeManager.cs" />
      <Compile Include="Assets\Scripts\playerMotor.cs" />
      <None Include="Assets\FSP\MAST\updates.txt" />
+     <None Include="Assets\Sprites\2D_CAVE_INTERIOR_-_Cartoony_Parallax_Background-GR\Help.txt" />
      <None Include="Assets\FSP\MAST\License.txt" />
      <None Include="Assets\FSP\MAST\readme.txt" />
      <None Include="Assets\Models\VertexColorUnlit.shader" />

@@ -17,7 +17,15 @@ public class Follower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceTravelled += speed * Time.deltaTime;
-        transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            distanceTravelled += speed * Time.deltaTime;
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            distanceTravelled -= speed * Time.deltaTime;
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        }
     }
 }

@@ -17,4 +17,10 @@ public class AbilityBar : MonoBehaviour
         slider.maxValue = value;
         slider.value = value;
     }
+
+    public void IsDead(float value)
+    {
+        slider.value -= value;
+    }
+
 }

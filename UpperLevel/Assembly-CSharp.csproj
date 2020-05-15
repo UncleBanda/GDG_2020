@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\Follower.cs" />
      <Compile Include="Assets\Scripts\PlayerTimeManagement.cs" />
+     <Compile Include="Assets\Scripts\RespawnPoint.cs" />
      <Compile Include="Assets\Scripts\TimeBody.cs" />
      <Compile Include="Assets\Scripts\TimeManager.cs" />
      <Compile Include="Assets\Scripts\playerMotor.cs" />

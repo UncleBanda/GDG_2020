@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AcidDropCollision : MonoBehaviour
 {
-    public GameObject player;
+
     public GameObject drop;
     private Rigidbody rb;
     private Vector3 originalPos;

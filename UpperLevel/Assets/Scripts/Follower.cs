@@ -7,7 +7,8 @@ public class Follower : MonoBehaviour
 {
     public PathCreator pathCreator;
     public float speed = 7;
-    float distanceTravelled; 
+    float distanceTravelled;
+    float currentDistance;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +18,18 @@ public class Follower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        if (Input.GetKey(KeyCode.D))
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+
+            
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             distanceTravelled -= speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+
+
         }
     }
 }

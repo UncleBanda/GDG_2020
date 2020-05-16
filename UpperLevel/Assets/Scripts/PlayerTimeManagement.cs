@@ -8,8 +8,12 @@ public class PlayerTimeManagement : MonoBehaviour
     // Start is called before the first frame update
     private TimeManager timemanager;
     public AbilityBar abilityBar;
-    static public float maxAbilityValue = 10; //static perchè cosi viene salvato di scena in scen e non si resetta
+    static public float maxAbilityValue = 10f; //static perchè cosi viene salvato di scena in scen e non si resetta
     static public float currentAbilityValue;
+    static public float currentBonusValue;
+
+
+
 
 
     // Start is called before the first frame update
@@ -19,10 +23,12 @@ public class PlayerTimeManagement : MonoBehaviour
         currentAbilityValue = maxAbilityValue;
         abilityBar.SetMaxValue(maxAbilityValue);
     }
+      
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Q)) //Stop Time when Q is pressed
         {
             if (currentAbilityValue > 0)
@@ -42,8 +48,16 @@ public class PlayerTimeManagement : MonoBehaviour
         {
             if (currentAbilityValue > 0)
             {
-                currentAbilityValue -= Time.deltaTime;
-                abilityBar.SetValue(currentAbilityValue);
+                if (currentBonusValue > 0)
+                {
+                    currentBonusValue -= Time.deltaTime;
+
+                }
+                else
+                {
+                    currentAbilityValue -= Time.deltaTime;
+                    abilityBar.SetValue(currentAbilityValue);
+                }
             }
             else
             {

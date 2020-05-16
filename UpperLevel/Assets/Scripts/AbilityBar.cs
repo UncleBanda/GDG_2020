@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AbilityBar : MonoBehaviour
 {
     public Slider slider;
+
     // Start is called before the first frame update
     public void SetValue(float value)
     {
@@ -18,9 +19,9 @@ public class AbilityBar : MonoBehaviour
         slider.value = value;
     }
 
-    public void IsDead(float value)
-    {
-        slider.value -= value;
-    }
+    //public void IsDead(float value)
+    //{
+    //  slider.value -= value;
+    //}
 
 }

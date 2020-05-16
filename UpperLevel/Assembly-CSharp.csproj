@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BonusAbility.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Grid\MAST_Grid_Component.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Grid\MAST_Grid_Manager.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Interface\MAST_Hotkeys.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Assets\Scripts\CamZone.cs" />
     <Compile Include="Assets\Scripts\CharacterControl.cs" />
     <Compile Include="Assets\Scripts\Follower.cs" />
+    <Compile Include="Assets\Scripts\GemScript.cs" />
     <Compile Include="Assets\Scripts\PlayerTimeManagement.cs" />
     <Compile Include="Assets\Scripts\RespawnPoint.cs" />
     <Compile Include="Assets\Scripts\TimeBody.cs" />

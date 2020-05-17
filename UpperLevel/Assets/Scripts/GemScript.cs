@@ -6,25 +6,24 @@ public class GemScript : MonoBehaviour
 {
 
     public GameObject player;
-    private MeshRenderer gem;
-    public BonusAbility bonus;
+
+    private bool entrato = false;
     // Update is called once per frame
 
-    private void Start()
-    {
-        gem = gameObject.GetComponent<MeshRenderer>();
-    }
+
     void Update()
     {
-        gem.transform.Rotate(0, 90 * Time.deltaTime, 0);
+        gameObject.transform.Rotate(0, 90 * Time.deltaTime, 0);
         
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if(other.name == player.name)
         {
             GameObject.Destroy(gameObject);
-            bonus.GemBonus(3f);
+            entrato = true;
+            Debug.Log("entrato");
+            player.GetComponent<PlayerTimeManagement>().GemBonus();
         }
         
     }

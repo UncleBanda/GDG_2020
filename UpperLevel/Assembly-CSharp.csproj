@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BonusAbility.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Grid\MAST_Grid_Component.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Grid\MAST_Grid_Manager.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Interface\MAST_Hotkeys.cs" />
@@ -115,14 +114,22 @@
     <Compile Include="Assets\Scripts\AbilityBar.cs" />
     <Compile Include="Assets\Scripts\AcidDropCollision.cs" />
     <Compile Include="Assets\Scripts\AttivaPath.cs" />
+    <Compile Include="Assets\Scripts\BonusAbility.cs" />
     <Compile Include="Assets\Scripts\CamZone.cs" />
     <Compile Include="Assets\Scripts\CharacterControl.cs" />
     <Compile Include="Assets\Scripts\Follower.cs" />
     <Compile Include="Assets\Scripts\GemScript.cs" />
+    <Compile Include="Assets\Scripts\KeyScript.cs" />
+    <Compile Include="Assets\Scripts\LeverActivate.cs" />
+    <Compile Include="Assets\Scripts\LeverActivateDx.cs" />
+    <Compile Include="Assets\Scripts\LeverManager.cs" />
+    <Compile Include="Assets\Scripts\NewRespawn.cs" />
     <Compile Include="Assets\Scripts\PlayerTimeManagement.cs" />
     <Compile Include="Assets\Scripts\RespawnPoint.cs" />
     <Compile Include="Assets\Scripts\TimeBody.cs" />
+    <Compile Include="Assets\Scripts\TimeBodyPlatform.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
+    <Compile Include="Assets\Scripts\TimeSceneManager.cs" />
     <Compile Include="Assets\Scripts\playerMotor.cs" />
     <None Include="Assets\FSP\MAST\updates.txt" />
     <None Include="Assets\Sprites\2D_CAVE_INTERIOR_-_Cartoony_Parallax_Background-GR\Help.txt" />

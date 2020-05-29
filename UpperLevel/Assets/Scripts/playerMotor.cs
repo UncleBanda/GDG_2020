@@ -8,6 +8,7 @@ public class playerMotor : MonoBehaviour
     private CharacterController controller;
     private float saltoTime=1f;
     private bool salta=false;
+    public bool grabEngine = false;
 
     //private float verticalVelocity;
     //private float gravity = 7.0f;

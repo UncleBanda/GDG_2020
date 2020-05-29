@@ -8,7 +8,6 @@ public class StairsActivate : MonoBehaviour {
     public GameObject rotellaColonna;
     public GameObject levaUp;
     public GameObject levaMiddle;
-    public GameObject levaDown;
     public GameObject stairs1;
     public GameObject stairs2;
     public GameObject stairs3;
@@ -25,7 +24,7 @@ public class StairsActivate : MonoBehaviour {
             {
                 levaUp.GetComponent<Animator>().enabled = true;
                 levaMiddle.GetComponent<Animator>().enabled = true;
-                levaDown.GetComponent<Animator>().enabled = true;
+        
 
                 stairs1.GetComponent<Animator>().enabled = true;
                 stairs2.GetComponent<Animator>().enabled = true;
@@ -36,11 +35,11 @@ public class StairsActivate : MonoBehaviour {
                 playerMotor.grabEngine = false;
             }
 
-            if (Input.GetKey(KeyCode.T) && playerMotor.grabEngine == false)
+           /* if (Input.GetKey(KeyCode.T) && playerMotor.grabEngine == false)
             {
                 playerMotor.grabEngine = true;
-                Destroy(rotellaColonna);
-            }
+                rotellaColonna.SetActive(false);
+            }*/
         }
     }
 

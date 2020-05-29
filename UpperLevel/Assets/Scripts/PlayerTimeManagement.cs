@@ -8,10 +8,9 @@ public class PlayerTimeManagement : MonoBehaviour
     // Start is called before the first frame update
     private TimeManager timemanager;
     public AbilityBar abilityBar;
-    public BonusAbility bonusBar;
     static public float maxAbilityValue = 10f; //static perchè cosi viene salvato di scena in scen e non si resetta
     static public float currentAbilityValue;
-    static public float currentBonusValue=0;
+    static public float currentBonusValue=0f;
     private bool bonusAtt = false;
 
 
@@ -27,8 +26,8 @@ public class PlayerTimeManagement : MonoBehaviour
     }
       public void GemBonus()
     {
-        currentBonusValue = currentBonusValue + 3;
-        bonusBar.SetValue(currentBonusValue);
+        currentBonusValue = currentAbilityValue + 3.33f;
+        abilityBar.SetMaxValue(currentBonusValue);
     }
 
     // Update is called once per frame
@@ -54,18 +53,9 @@ public class PlayerTimeManagement : MonoBehaviour
         {
             if (currentAbilityValue > 0)
             {
-                if (currentBonusValue > 0)
-                {
-                    currentBonusValue -= Time.deltaTime;
-                    bonusBar.SetValue(currentBonusValue);
-                    bonusAtt = true;
-                }
-                else
-                {
-                    bonusAtt = false;
+                
                     currentAbilityValue -= Time.deltaTime;
                     abilityBar.SetValue(currentAbilityValue);
-                }
             }
             else
             {
@@ -74,7 +64,7 @@ public class PlayerTimeManagement : MonoBehaviour
 
             }
         }
-        if ((timemanager.TimeIsStopped==false&&currentAbilityValue<10)||(bonusAtt==true && currentAbilityValue < 10))
+        if ((timemanager.TimeIsStopped==false&&currentAbilityValue<currentBonusValue)||(bonusAtt==true && currentAbilityValue < currentBonusValue))
         {
 
             currentAbilityValue = currentAbilityValue+ (Time.deltaTime*0.25f);

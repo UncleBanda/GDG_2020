@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4438766, g: 0.4932469, b: 0.5727432, a: 1}
+  m_IndirectSpecularColor: {r: 0.44387585, g: 0.49324644, b: 0.57274246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3429,6 +3429,7 @@ GameObject:
   - component: {fileID: 463233513}
   - component: {fileID: 463233512}
   - component: {fileID: 463233511}
+  - component: {fileID: 463233515}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -3510,6 +3511,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &463233515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463233510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15af54a3705a694c9cefc84a404a0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &467853694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7397,6 +7410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d59950178864146800678097db042e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabEngine: 0
   speed: 7
   groundLayers:
     serializedVersion: 2
@@ -8152,7 +8166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0.005627507, y: 0.99227816, z: -0.10982687, w: -0.057363577}
-  m_LocalPosition: {x: -32.94948, y: -6.7751055, z: -25.105099}
+  m_LocalPosition: {x: -32.863865, y: -6.775229, z: -25.115017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14849,6 +14863,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681371091}
   m_Mesh: {fileID: -4142219771195877799, guid: bed0663e5f1fca545aa08687a5ccc02c, type: 3}
+--- !u!1 &1683410737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683410739}
+  - component: {fileID: 1683410738}
+  m_Layer: 0
+  m_Name: GameStatus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1683410738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683410737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c8e8e57c73c5b4b885f52a09eeb48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1683410739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683410737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -221.74512, y: 5.9215374, z: 27.411932}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1700969118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15115,7 +15172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759718482}
   m_LocalRotation: {x: -0.081638575, y: 0.6610845, z: -0.07368007, w: -0.7422088}
-  m_LocalPosition: {x: 29.635574, y: 6.4784217, z: -3.8150325}
+  m_LocalPosition: {x: 29.621403, y: 6.4782443, z: -3.937337}
   m_LocalScale: {x: 3.3333323, y: 3.333333, z: 3.3333323}
   m_Children: []
   m_Father: {fileID: 837180856}
@@ -17363,7 +17420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970811063}
   m_LocalRotation: {x: -0.005627507, y: 0.99227816, z: -0.10982687, w: -0.057363577}
-  m_LocalPosition: {x: -32.94948, y: -6.7751055, z: -25.105099}
+  m_LocalPosition: {x: -32.863865, y: -6.775229, z: -25.115017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2111482399}

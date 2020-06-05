@@ -30,7 +30,32 @@ ModelImporter:
   - first:
       74: -5388062019316189440
     second: Armature|standingjump
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 7adf28027c2cbf8459b70a0e74e7df06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: azzurrino
+    second: {fileID: 2100000, guid: e267946c7e4735d4e9d05ffb01310cd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: azzurrissimo
+    second: {fileID: 2100000, guid: 43218cbf82a36554d95d7823986bcc47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bianco
+    second: {fileID: 2100000, guid: 1692097bcba4ecd4c8c389414eb4b8df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grigio
+    second: {fileID: 2100000, guid: 26f8cd91b8a4c47428e53702cd1a0907, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

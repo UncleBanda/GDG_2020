@@ -133,6 +133,7 @@
      <None Include="Assets\FSP\MAST\License.txt" />
      <None Include="Assets\FSP\MAST\readme.txt" />
      <None Include="Assets\Models\VertexColorUnlit.shader" />
+     <None Include="Assets\Shaders\CustomLighting.hlsl" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -3,7 +3,12 @@ guid: eaefbb63507969648a2b22ceb8b1bbe2
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Colo_Nuage
+    second: {fileID: 2100000, guid: 5c880b0150b7d5c448be8bfb245d2b8a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

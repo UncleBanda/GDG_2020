@@ -14,8 +14,8 @@ public class acidPhase : MonoBehaviour
         int phase = GameStatus.GetPhase();
         if (phase != 0)
         {
-            transform.Translate(Vector3.up * phase* 7f);
-            
+            transform.Translate(Vector3.up * phase* 3f);
+           
         }
       
     }

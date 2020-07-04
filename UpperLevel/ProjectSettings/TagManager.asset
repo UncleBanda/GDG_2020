@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TimeManager
   - TimeSlider
+  - drop
   layers:
   - Default
   - TransparentFX

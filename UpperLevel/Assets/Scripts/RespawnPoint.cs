@@ -6,6 +6,7 @@ public class RespawnPoint : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private Transform respawnPoint;
+    
   
     public void SetRespawnPoint(Vector3 positon)
     {
@@ -13,6 +14,7 @@ public class RespawnPoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        UnityEngine.Debug.Log("fdsf");
         player.transform.position = respawnPoint.transform.position;
     }
 }

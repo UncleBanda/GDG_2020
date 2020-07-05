@@ -24,12 +24,13 @@ public class PlayerTimeManagement : MonoBehaviour
         currentAbilityValue = maxAbilityValue;
         abilityBar.SetMaxValue(maxAbilityValue);
     }
-      public void GemBonus()
+      public void GemBonus(int value)
     {
-        currentBonusValue = currentAbilityValue + 3.33f;
+        currentBonusValue = currentAbilityValue + 3.33f*value;
         abilityBar.SetMaxValue(currentBonusValue);
     }
 
+   
     // Update is called once per frame
     void Update()
     {

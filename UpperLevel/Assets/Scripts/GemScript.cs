@@ -23,7 +23,7 @@ public class GemScript : MonoBehaviour
             GameObject.Destroy(gameObject);
             entrato = true;
             Debug.Log("entrato");
-            player.GetComponent<PlayerTimeManagement>().GemBonus();
+            player.GetComponent<PlayerTimeManagement>().GemBonus(1);
         }
         
     }

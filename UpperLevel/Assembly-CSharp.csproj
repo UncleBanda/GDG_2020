@@ -116,10 +116,9 @@
      <Compile Include="Assets\Scripts\LeverActivate.cs" />
      <Compile Include="Assets\Scripts\LeverActivateDx.cs" />
      <Compile Include="Assets\Scripts\LeverManager.cs" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\NewRespawn.cs" />
      <Compile Include="Assets\Scripts\PlayerTimeManagement.cs" />
-     <Compile Include="Assets\Scripts\Potionn.cs" />
+     <Compile Include="Assets\Scripts\Potionn1.cs" />
      <Compile Include="Assets\Scripts\PrendiRotella.cs" />
      <Compile Include="Assets\Scripts\RespawnPoint.cs" />
      <Compile Include="Assets\Scripts\StairsActivate.cs" />
@@ -137,6 +136,7 @@
      <Compile Include="Assets\Scripts\platformActive.cs" />
      <Compile Include="Assets\Scripts\playerMotor.cs" />
      <Compile Include="Assets\Scripts\stallPhase.cs" />
+     <Compile Include="Assets\Scripts\stop.cs" />
      <Compile Include="Assets\Scripts\threelev.cs" />
      <Compile Include="Assets\effetti\effectObject.cs" />
      <Compile Include="Assets\effetti\hit.cs" />

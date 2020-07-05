@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1514495064339150236}
   - component: {fileID: 1514495064339150235}
   - component: {fileID: 1514495064339150224}
+  - component: {fileID: 1099543757}
+  - component: {fileID: 1099543756}
   m_Layer: 0
   m_Name: acido
   m_TagString: Untagged
@@ -125,3 +127,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitParticles: {fileID: 1101948267232559828, guid: e99dd69f13f97824098bbd137d191f66,
     type: 3}
+--- !u!95 &1099543757
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514495064339150234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1099543756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514495064339150234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19df555f166cbd94fb423c75fc8b2c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeBeforeAffected: 0

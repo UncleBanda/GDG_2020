@@ -11,6 +11,7 @@ public class animCurve : MonoBehaviour
     float arrivo;
     public bool x = false;
     public bool y = false;
+    public float speed = 1f;
 
     void Start()
     {
@@ -18,21 +19,21 @@ public class animCurve : MonoBehaviour
         arrivo = startPos.y + offset;
         if (x)
         {
-            curve = new AnimationCurve(new Keyframe(0, startPos.x), new Keyframe(offset, startPos.x + offset));
+            curve = new AnimationCurve(new Keyframe(0, startPos.x), new Keyframe(offset/speed, startPos.x + offset));
         }
         if (y)
         {
-            curve = new AnimationCurve(new Keyframe(0, startPos.y), new Keyframe(offset, arrivo));
+            curve = new AnimationCurve(new Keyframe(0, startPos.y), new Keyframe(offset/speed, arrivo));
         }
         //curve = new AnimationCurve(new Keyframe(0, startPos.y), new Keyframe(offset, startPos.y + offset));
         curve.preWrapMode = WrapMode.PingPong;
         curve.postWrapMode = WrapMode.PingPong;
     }
 
-    void OnAwake()
+   /* void OnAwake()
     {
         UnityEngine.Debug.Log("dsd");
-    }
+    }*/
 
     void Update()
     {

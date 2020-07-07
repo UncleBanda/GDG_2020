@@ -26,8 +26,9 @@ public class PlayerTimeManagement : MonoBehaviour
     }
       public void GemBonus(int value)
     {
-        currentBonusValue = currentAbilityValue + 3.33f*value;
+        currentBonusValue = currentAbilityValue + (3.33f)*value;
         abilityBar.SetMaxValue(currentBonusValue);
+        UnityEngine.Debug.Log("" + currentBonusValue);
     }
 
    

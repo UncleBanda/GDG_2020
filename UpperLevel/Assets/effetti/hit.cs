@@ -32,7 +32,7 @@ public class hit : MonoBehaviour
 
     public void Hit()
     {
-        Instantiate(hitParticles, transform.position, hitParticles.transform.rotation); ;
+        Instantiate(hitParticles, transform.position, hitParticles.transform.rotation); 
         transform.position = startPos;
         if (GetComponent<Rigidbody>() != null)
         {

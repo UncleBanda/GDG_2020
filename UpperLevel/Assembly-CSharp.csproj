@@ -728,11 +728,17 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
  <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
  <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
@@ -748,12 +754,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>C:/Users/User/Documents/gdg/repository/GDG_2020/UpperLevel/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -35,9 +35,10 @@ public class PlayerTimeManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Q)) //Stop Time when Q is pressed
+        
+        if (Input.GetKeyDown(KeyCode.O) && (timemanager.TimeIsStopped==false)) //Stop Time when Q is pressed
         {
+            UnityEngine.Debug.Log("stop");
             if (currentAbilityValue > 0)
             {
                 timemanager.StopTime();
@@ -47,6 +48,7 @@ public class PlayerTimeManagement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && timemanager.TimeIsStopped)  //Continue Time when E is pressed
         {
+            UnityEngine.Debug.Log("go");
             timemanager.ContinueTime();
 
         }

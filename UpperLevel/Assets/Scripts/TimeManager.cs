@@ -6,6 +6,11 @@ public class TimeManager : MonoBehaviour
 {
     public bool TimeIsStopped;
 
+    void Start() {
+        TimeIsStopped = false;
+
+    }
+       
     public void ContinueTime()
     {
         TimeIsStopped = false;

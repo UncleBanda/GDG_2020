@@ -141,7 +141,6 @@
      <Compile Include="Assets\Scripts\platformActive.cs" />
      <Compile Include="Assets\Scripts\playerMotor.cs" />
      <Compile Include="Assets\Scripts\stallPhase.cs" />
-     <Compile Include="Assets\Scripts\stop.cs" />
      <Compile Include="Assets\Scripts\threelev.cs" />
      <Compile Include="Assets\effetti\effectObject.cs" />
      <Compile Include="Assets\effetti\hit.cs" />

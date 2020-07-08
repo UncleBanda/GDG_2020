@@ -36,22 +36,17 @@ public class PlayerTimeManagement : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.O) && (timemanager.TimeIsStopped==false)) //Stop Time when Q is pressed
+        if (Input.GetKeyDown(KeyCode.O)) //Stop Time when Q is pressed
         {
-            UnityEngine.Debug.Log("stop");
-            if (currentAbilityValue > 0)
-            {
-                timemanager.StopTime();
-
-            }
+            Stoppate();
 
         }
-        if (Input.GetKeyDown(KeyCode.E) && timemanager.TimeIsStopped)  //Continue Time when E is pressed
+        /*if (Input.GetKeyDown(KeyCode.O) && timemanager.TimeIsStopped)  //Continue Time when E is pressed
         {
             UnityEngine.Debug.Log("go");
             timemanager.ContinueTime();
 
-        }
+        }*/
 
         if (timemanager.TimeIsStopped)
         {
@@ -74,5 +69,23 @@ public class PlayerTimeManagement : MonoBehaviour
             currentAbilityValue = currentAbilityValue+ (Time.deltaTime*0.25f);
             abilityBar.SetValue(currentAbilityValue);
         }
+    }
+
+    void Stoppate()
+    {
+        if (timemanager.TimeIsStopped)
+        {
+            UnityEngine.Debug.Log("go");
+            timemanager.ContinueTime();
+        }
+        else
+        {
+            if (currentAbilityValue > 0)
+            {
+                timemanager.StopTime();
+
+            }
+        }
+           
     }
 }

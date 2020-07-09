@@ -23,6 +23,7 @@ public class PlayerTimeManagement : MonoBehaviour
     {
         maxAbilityValue = maxAbilityValue + (3)*value;
         abilityBar.SetMaxValue(maxAbilityValue);
+        currentAbilityValue = maxAbilityValue;
     }
 
    

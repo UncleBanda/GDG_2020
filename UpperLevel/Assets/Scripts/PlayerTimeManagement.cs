@@ -26,6 +26,7 @@ public class PlayerTimeManagement : MonoBehaviour
         //GameStatus.SetMaxAbility(maxAbilityValue);
         UnityEngine.Debug.Log("" + maxAbilityValue);
         abilityBar.SetMaxValue(maxAbilityValue);
+        currentAbilityValue = maxAbilityValue;
     }
 
    

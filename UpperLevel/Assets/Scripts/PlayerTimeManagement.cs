@@ -8,13 +8,14 @@ public class PlayerTimeManagement : MonoBehaviour
     // Start is called before the first frame update
     private TimeManager timemanager;
     public AbilityBar abilityBar;
-    public float maxAbilityValue = 10f; //static perchè cosi viene salvato di scena in scen e non si resetta
+    public float maxAbilityValue =10f; //static perchè cosi viene salvato di scena in scen e non si resetta
     public float currentAbilityValue;
 
     // Start is called before the first frame update
     void Start()
     {
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
+        //maxAbilityValue = GameStatus.GetMaxAbility();
         currentAbilityValue = maxAbilityValue;
         abilityBar.SetMaxValue(maxAbilityValue);
         abilityBar.SetValue(currentAbilityValue);
@@ -22,6 +23,8 @@ public class PlayerTimeManagement : MonoBehaviour
       public void GemBonus(int value)
     {
         maxAbilityValue = maxAbilityValue + (3)*value;
+        //GameStatus.SetMaxAbility(maxAbilityValue);
+        UnityEngine.Debug.Log("" + maxAbilityValue);
         abilityBar.SetMaxValue(maxAbilityValue);
     }
 

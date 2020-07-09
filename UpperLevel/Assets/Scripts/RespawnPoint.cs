@@ -26,7 +26,7 @@ public class RespawnPoint : MonoBehaviour
 
             animorte = false;
             time = startTime;
-            player.transform.position = respawnPoint.transform.position;
+            //player.transform.position = respawnPoint.transform.position;
         }
 
     }
@@ -39,6 +39,6 @@ public class RespawnPoint : MonoBehaviour
     {
         animorte = true;
         p.GetComponent<DeathEffect>().Die();
-        
+        player.transform.position = respawnPoint.transform.position;
     }
 }

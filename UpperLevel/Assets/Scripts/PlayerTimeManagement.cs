@@ -8,25 +8,27 @@ public class PlayerTimeManagement : MonoBehaviour
     // Start is called before the first frame update
     private TimeManager timemanager;
     public AbilityBar abilityBar;
-    public float maxAbilityValue =10f; //static perchè cosi viene salvato di scena in scen e non si resetta
-    public float currentAbilityValue;
+    static public float maxAbilityValue = 10f; //static perchè cosi viene salvato di scena in scen e non si resetta
+    static public float currentAbilityValue;
+    static public float currentBonusValue=0f;
+    private bool bonusAtt = false;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
-        //maxAbilityValue = GameStatus.GetMaxAbility();
         currentAbilityValue = maxAbilityValue;
         abilityBar.SetMaxValue(maxAbilityValue);
-        abilityBar.SetValue(currentAbilityValue);
     }
       public void GemBonus(int value)
     {
-        maxAbilityValue = maxAbilityValue + (3)*value;
-        //GameStatus.SetMaxAbility(maxAbilityValue);
-        UnityEngine.Debug.Log("" + maxAbilityValue);
-        abilityBar.SetMaxValue(maxAbilityValue);
-        currentAbilityValue = maxAbilityValue;
+        currentBonusValue = currentAbilityValue + (3.33f)*value;
+        abilityBar.SetMaxValue(currentBonusValue);
+        UnityEngine.Debug.Log("" + currentBonusValue);
     }
 
    
@@ -34,9 +36,18 @@ public class PlayerTimeManagement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.O)) //Stop Time when Q is pressed
+        if (Input.GetKeyDown(KeyCode.Q)) //Stop Time when Q is pressed
         {
-            Stoppate();
+            if (currentAbilityValue > 0)
+            {
+                timemanager.StopTime();
+
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.E) && timemanager.TimeIsStopped)  //Continue Time when E is pressed
+        {
+            timemanager.ContinueTime();
 
         }
 
@@ -55,28 +66,11 @@ public class PlayerTimeManagement : MonoBehaviour
 
             }
         }
-        if (currentAbilityValue <= maxAbilityValue)
+        if ((timemanager.TimeIsStopped==false&&currentAbilityValue<currentBonusValue)||(bonusAtt==true && currentAbilityValue < currentBonusValue))
         {
-            currentAbilityValue = currentAbilityValue + (Time.deltaTime * 0.25f);
-        }
-        abilityBar.SetValue(currentAbilityValue);
 
-    }
-    void Stoppate()
-    {
-        if (timemanager.TimeIsStopped)
-        {
-            UnityEngine.Debug.Log("go");
-            timemanager.ContinueTime();
+            currentAbilityValue = currentAbilityValue+ (Time.deltaTime*0.25f);
+            abilityBar.SetValue(currentAbilityValue);
         }
-        else
-        {
-            if (currentAbilityValue > 0)
-            {
-                timemanager.StopTime();
-
-            }
-        }
-
     }
 }

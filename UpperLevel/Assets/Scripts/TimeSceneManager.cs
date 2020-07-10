@@ -42,7 +42,7 @@ public class TimeSceneManager : MonoBehaviour
         if(cont==2 && SceneManager.GetActiveScene().buildIndex == 0)
         {
             player.transform.position = new Vector3(-41.35f, 3.25f, 8.54f);
-            //sliderBonus.value = 6;
+            sliderBonus.value = 6;
         }
     }
 }

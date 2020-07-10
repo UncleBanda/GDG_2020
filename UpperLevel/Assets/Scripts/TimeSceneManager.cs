@@ -9,11 +9,8 @@ public class TimeSceneManager : MonoBehaviour
     // Start is called before the first frame update
 
     public Slider slider;
-    public GameObject player;
-    public GameObject respawner;
     public int level;
     public static int cont = 0;
-    public Slider sliderBonus; //fool
 
     void Start()
     {
@@ -36,13 +33,7 @@ public class TimeSceneManager : MonoBehaviour
         if (slider.value >= slider.maxValue)
         {
             SceneChange(level);
-            cont=cont+2;
         }
-        
-        if(cont==2 && SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            player.transform.position = new Vector3(-41.35f, 3.25f, 8.54f);
-            //sliderBonus.value = 6;
-        }
+
     }
 }

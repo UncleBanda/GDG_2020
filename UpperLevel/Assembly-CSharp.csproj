@@ -128,11 +128,14 @@
     <Compile Include="Assets\Scripts\LeverActivate.cs" />
     <Compile Include="Assets\Scripts\LeverActivateDx.cs" />
     <Compile Include="Assets\Scripts\LeverManager.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\NewRespawn.cs" />
     <Compile Include="Assets\Scripts\PlayerTimeManagement.cs" />
+    <Compile Include="Assets\Scripts\Potionn.cs" />
     <Compile Include="Assets\Scripts\Potionn1.cs" />
     <Compile Include="Assets\Scripts\PrendiRotella.cs" />
     <Compile Include="Assets\Scripts\RespawnPoint.cs" />
+    <Compile Include="Assets\Scripts\SetRespawn.cs" />
     <Compile Include="Assets\Scripts\StairsActivate.cs" />
     <Compile Include="Assets\Scripts\TimeBody.cs" />
     <Compile Include="Assets\Scripts\TimeBodyPlatform.cs" />

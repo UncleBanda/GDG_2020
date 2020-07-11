@@ -11,6 +11,10 @@ public class PlayerTimeManagement : MonoBehaviour
     public float maxAbilityValue =10f; //static perchè cosi viene salvato di scena in scen e non si resetta
     public float currentAbilityValue;
 
+    public GameObject Background1;
+    public GameObject Background2;
+    public GameObject FillArea;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +22,47 @@ public class PlayerTimeManagement : MonoBehaviour
         //maxAbilityValue = GameStatus.GetMaxAbility();
         currentAbilityValue = maxAbilityValue;
         abilityBar.SetMaxValue(maxAbilityValue);
-        abilityBar.SetValue(currentAbilityValue);
-    }
-      public void GemBonus(int value)
+        abilityBar.SetValue(currentAbilityValue);                                                                                                                            
+    }                                                                                                                                                                        
+      public void GemBonus(int value)                                                                                                                                        
     {
-        maxAbilityValue = maxAbilityValue + (3)*value;
-        //GameStatus.SetMaxAbility(maxAbilityValue);
-        UnityEngine.Debug.Log("" + maxAbilityValue);
-        abilityBar.SetMaxValue(maxAbilityValue);
-        currentAbilityValue = maxAbilityValue;
+        if (maxAbilityValue < 19 && maxAbilityValue>4)
+        {
+            maxAbilityValue = maxAbilityValue + (3) * value;
+            //GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
+            UnityEngine.Debug.Log("" + maxAbilityValue);
+            abilityBar.SetMaxValue(maxAbilityValue);
+            currentAbilityValue = maxAbilityValue;
+
+            Background1.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+            Background2.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+            FillArea.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+        }
+            if(maxAbilityValue <= 4 && value > 0)
+        {
+            maxAbilityValue = maxAbilityValue + (3) * value;
+            //GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
+            UnityEngine.Debug.Log("" + maxAbilityValue);
+            abilityBar.SetMaxValue(maxAbilityValue);
+            currentAbilityValue = maxAbilityValue;
+
+            Background1.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+            Background2.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+            FillArea.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+        }
+
+        if (maxAbilityValue >= 19 && value < 0)
+        {
+            maxAbilityValue = maxAbilityValue + (3) * value;
+            //GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
+            UnityEngine.Debug.Log("" + maxAbilityValue);
+            abilityBar.SetMaxValue(maxAbilityValue);
+            currentAbilityValue = maxAbilityValue;
+
+            Background1.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+            Background2.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+            FillArea.gameObject.transform.localScale += new Vector3(0.3f * value, 0f, 0f);
+        }
     }
 
    

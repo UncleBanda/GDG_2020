@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Diagnostics;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 public class playerMotor : MonoBehaviour
@@ -17,27 +21,33 @@ public class playerMotor : MonoBehaviour
     private Rigidbody rb;
     public LayerMask groundLayers;
     public float jumpForce = 7f;
-    private SphereCollider col;
-
+    private BoxCollider col;
+    public GameObject Grounded;
     static Animator animator;
+    public bool jump= false;
+  
       
-
+                
     void Start()
     {
         //controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<SphereCollider>();
+        col = GetComponent<BoxCollider>();
+        //setSpheres();
     }
 
     void Update()
     {
+
         float horizontal = Input.GetAxis("Horizontal");
+
         animator.SetFloat("horizontal", horizontal);
         float translation = horizontal * speed * Time.deltaTime;
+        
         transform.Translate(Vector3.forward * Mathf.Abs(translation));
 
-        if (salta == true)
+       /* if (salta == true)
         {
             saltoTime -= Time.deltaTime;
         }
@@ -46,12 +56,12 @@ public class playerMotor : MonoBehaviour
         {
             salta = false;
             saltoTime = 1f;
-        }
+        }*/
 
         // da considerare per miglioramenti al movimento
         //rb.AddForce(Vector3.forward * horizontal * speed);
 
-        if (translation != 0)
+        if (translation != 0 )
         {
             animator.SetBool("isMoving", true);
             if (translation < 0)
@@ -69,13 +79,28 @@ public class playerMotor : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-        if (Input.GetButtonDown("Jump")  && IsGrounded() && salta==false)
+        if (Input.GetButtonDown("Jump") && jump ==false )
         {
-            animator.SetTrigger("isJumping");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            salta = true;
-        }              
-         
+            animator.SetTrigger("isJumping");
+            
+            jump = true;
+            //UnityEngine.Debug.Log(""+ IsGrounded());
+            
+           
+           // salta = true;
+        }
+
+        if (jump)
+        {
+            if (IsGrounded())
+            {
+                
+                
+                animator.SetTrigger("atterra");
+                jump = false;
+            }
+        }
         //parte vecchia con il character controller 
         /*if (controller.isGrounded)
         {
@@ -99,8 +124,23 @@ public class playerMotor : MonoBehaviour
         controller.Move(moveVector*Time.deltaTime);*/
     }
 
-    private bool IsGrounded()
+  
+
+    public bool IsGrounded()
     {
-        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius*9f, groundLayers);
+        if (rb.velocity.y <0f)
+        {
+            
+            UnityEngine.Debug.DrawRay(Grounded.transform.position, -Vector3.up * 1f, Color.yellow);
+            //rb.velocity -= Vector3.up * 1.5f;
+            RaycastHit hit;
+            if (Physics.Raycast(Grounded.transform.position, -Vector3.up, out hit, 1f))
+            {
+                return true;
             }
+            else return false;
+        }
+        else return false;
+    }
+    
 }

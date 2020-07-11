@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\AbilityBar.cs" />
     <Compile Include="Assets\Scripts\AcidDropCollision.cs" />
     <Compile Include="Assets\Scripts\AttivaPath.cs" />
+    <Compile Include="Assets\Scripts\BigR.cs" />
     <Compile Include="Assets\Scripts\BonusAbility.cs" />
     <Compile Include="Assets\Scripts\CamZone.cs" />
     <Compile Include="Assets\Scripts\CharacterControl.cs" />
@@ -146,7 +147,10 @@
     <Compile Include="Assets\Scripts\costruttiva.cs" />
     <Compile Include="Assets\Scripts\downacid.cs" />
     <Compile Include="Assets\Scripts\generalLev.cs" />
+    <Compile Include="Assets\Scripts\lancetta.cs" />
+    <Compile Include="Assets\Scripts\leverFin.cs" />
     <Compile Include="Assets\Scripts\leverplat.cs" />
+    <Compile Include="Assets\Scripts\menu.cs" />
     <Compile Include="Assets\Scripts\movingplatform.cs" />
     <Compile Include="Assets\Scripts\platformActive.cs" />
     <Compile Include="Assets\Scripts\playerMotor.cs" />

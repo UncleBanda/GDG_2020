@@ -93,7 +93,7 @@ public class playerMotor : MonoBehaviour
 
         if (jump)
         {
-            if (IsGrounded())
+            if (IsGrounded()==true)
             {
                 
                 
@@ -131,14 +131,33 @@ public class playerMotor : MonoBehaviour
         if (rb.velocity.y <0f)
         {
             
-            UnityEngine.Debug.DrawRay(Grounded.transform.position, -Vector3.up * 1f, Color.yellow);
+           
             //rb.velocity -= Vector3.up * 1.5f;
-            RaycastHit hit;
-            if (Physics.Raycast(Grounded.transform.position, -Vector3.up, out hit, 1f))
+            RaycastHit hit1;
+            RaycastHit hit2;
+            RaycastHit hit3;
+            int i=0;
+
+            if (Physics.Raycast(Grounded.transform.position, -Vector3.up, out hit1, 1f)==true)
+            {
+                i ++;
+               
+            }
+            if (Physics.Raycast(Grounded.transform.position, -Vector3.up, out hit2, 1f) == true)
+            {
+                i++;
+
+            }
+            if (Physics.Raycast(Grounded.transform.position, -Vector3.up, out hit3, 1f) == true)
+            {
+                i++;
+
+            }
+
+            if (i > 1)
             {
                 return true;
             }
-            else return false;
         }
         else return false;
     }

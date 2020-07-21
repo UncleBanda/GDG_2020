@@ -28,6 +28,7 @@ public class playerMotor : MonoBehaviour
     public GameObject Grounded3;
     static Animator animator;
     public bool jump= false;
+    private bool isGroundedBool;
 
   
       
@@ -43,7 +44,7 @@ public class playerMotor : MonoBehaviour
 
     void Update()
     {
-
+        isGroundedBool = IsGrounded();
         float horizontal = Input.GetAxis("Horizontal");
 
         animator.SetFloat("horizontal", horizontal);
@@ -95,14 +96,17 @@ public class playerMotor : MonoBehaviour
 
             // salta = true;
         }
+        animator.SetBool("Atterra_bool",isGroundedBool);
 
         if (jump)
         {
-            if (IsGrounded()==true)
+
+            
+            if (rb.velocity.y<0f && isGroundedBool==true)
             {
                 
                 
-                animator.SetTrigger("atterra");
+                //animator.SetTrigger("atterra");
                 jump = false;
 
 
@@ -136,8 +140,9 @@ public class playerMotor : MonoBehaviour
 
     public bool IsGrounded()
     {
-        if (rb.velocity.y <0f)
-        {
+       
+       // if (rb.velocity.y <0f)
+      //  {
 
             UnityEngine.Debug.DrawRay(Grounded1.transform.position, -Vector3.up * 0.5f, Color.yellow);
             UnityEngine.Debug.DrawRay(Grounded2.transform.position, -Vector3.up * 0.5f, Color.yellow);
@@ -177,8 +182,8 @@ public class playerMotor : MonoBehaviour
             else return false;
 
 
-        }
-        else return false;
+       // }
+       // else return false;
     }
     
 }

@@ -8,7 +8,7 @@ public class PlayerTimeManagement : MonoBehaviour
     // Start is called before the first frame update
     private TimeManager timemanager;
     public AbilityBar abilityBar;
-    public float maxAbilityValue =10f; //static perchè cosi viene salvato di scena in scen e non si resetta
+    public float maxAbilityValue; //static perchè cosi viene salvato di scena in scen e non si resetta
     public float currentAbilityValue;
 
     public GameObject Background1;
@@ -19,17 +19,18 @@ public class PlayerTimeManagement : MonoBehaviour
     void Start()
     {
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
-        //maxAbilityValue = GameStatus.GetMaxAbility();
+        maxAbilityValue = GameStatus.GetMaxAbility();
         currentAbilityValue = maxAbilityValue;
         abilityBar.SetMaxValue(maxAbilityValue);
-        abilityBar.SetValue(currentAbilityValue);                                                                                                                            
+        abilityBar.SetValue(currentAbilityValue);
+        UnityEngine.Debug.Log("" + maxAbilityValue);
     }                                                                                                                                                                        
       public void GemBonus(int value)                                                                                                                                        
     {
         if (maxAbilityValue < 19 && maxAbilityValue>4)
         {
             maxAbilityValue = maxAbilityValue + (3) * value;
-            //GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
+            GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
             UnityEngine.Debug.Log("" + maxAbilityValue);
             abilityBar.SetMaxValue(maxAbilityValue);
             currentAbilityValue = maxAbilityValue;
@@ -41,7 +42,7 @@ public class PlayerTimeManagement : MonoBehaviour
             if(maxAbilityValue <= 4 && value > 0)
         {
             maxAbilityValue = maxAbilityValue + (3) * value;
-            //GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
+            GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
             UnityEngine.Debug.Log("" + maxAbilityValue);
             abilityBar.SetMaxValue(maxAbilityValue);
             currentAbilityValue = maxAbilityValue;
@@ -54,7 +55,7 @@ public class PlayerTimeManagement : MonoBehaviour
         if (maxAbilityValue >= 19 && value < 0)
         {
             maxAbilityValue = maxAbilityValue + (3) * value;
-            //GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
+            GameStatus.SetMaxAbility(maxAbilityValue);                                                                                                                         
             UnityEngine.Debug.Log("" + maxAbilityValue);
             abilityBar.SetMaxValue(maxAbilityValue);
             currentAbilityValue = maxAbilityValue;

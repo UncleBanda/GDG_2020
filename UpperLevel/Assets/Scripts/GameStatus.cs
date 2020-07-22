@@ -8,7 +8,7 @@ public class GameStatus : MonoBehaviour
     static protected float maxAbility= 10f;
     [SerializeField] static private Transform respawnUp;
     [SerializeField] static private Transform respawnDown;
-    // Start is called before the first frame update
+    // Start is called before the first frame update    
     void Start()
     {
         

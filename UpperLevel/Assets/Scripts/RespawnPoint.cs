@@ -10,6 +10,7 @@ public class RespawnPoint : MonoBehaviour
     public float time=3;
     float startTime;
     bool animorte = false;
+    //public CinemachineVirtualCamera virtualCamera;
 
     void Start()
     {

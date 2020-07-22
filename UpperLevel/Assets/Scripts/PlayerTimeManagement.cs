@@ -24,6 +24,10 @@ public class PlayerTimeManagement : MonoBehaviour
         abilityBar.SetMaxValue(maxAbilityValue);
         abilityBar.SetValue(currentAbilityValue);
         UnityEngine.Debug.Log("" + maxAbilityValue);
+        float scale = maxAbilityValue / 10;
+        Background1.gameObject.transform.localScale = new Vector3(scale, 1f, 1f);
+        Background2.gameObject.transform.localScale = new Vector3(scale, 1f, 1f);
+        FillArea.gameObject.transform.localScale = new Vector3(scale, 1f, 1f);
     }                                                                                                                                                                        
       public void GemBonus(int value)                                                                                                                                        
     {

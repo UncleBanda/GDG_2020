@@ -14,7 +14,7 @@ public class pausa : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("principessinarig1");
+        
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class pausa : MonoBehaviour
 
         if (player == null)
         {
-            player = GameObject.FindWithTag("Player");
+            player = GameObject.Find("principessinarig1");
             if (player != null)
             {
                 animatorPlayer = player.transform.GetComponent<Animator>();

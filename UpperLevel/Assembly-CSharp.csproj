@@ -125,6 +125,7 @@
     <Compile Include="Assets\Scripts\CamZone.cs" />
     <Compile Include="Assets\Scripts\CharacterControl.cs" />
     <Compile Include="Assets\Scripts\DeathEffect.cs" />
+    <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Follower.cs" />
     <Compile Include="Assets\Scripts\GameStatus.cs" />
     <Compile Include="Assets\Scripts\GemScript.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Assets\Scripts\playerMotorOld.cs" />
     <Compile Include="Assets\Scripts\stallPhase.cs" />
     <Compile Include="Assets\Scripts\threelev.cs" />
+    <Compile Include="Assets\Suggerimento.cs" />
     <Compile Include="Assets\effetti\effectObject.cs" />
     <Compile Include="Assets\effetti\hit.cs" />
     <Compile Include="Assets\pausa.cs" />

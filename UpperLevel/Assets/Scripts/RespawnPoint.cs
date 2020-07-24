@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class RespawnPoint : MonoBehaviour
 {
@@ -10,11 +11,12 @@ public class RespawnPoint : MonoBehaviour
     public float time=3;
     float startTime;
     bool animorte = false;
-    //public CinemachineVirtualCamera virtualCamera;
+    public CinemachineVirtualCamera virtualCamera;
 
     void Start()
     {
-        startTime = time;        
+        startTime = time;
+        p = GameObject.Find("principessinarig1");
     }
     void Update()
     {
@@ -27,7 +29,7 @@ public class RespawnPoint : MonoBehaviour
 
             animorte = false;
             time = startTime;
-            //player.transform.position = respawnPoint.transform.position;
+            virtualCamera.Follow = p.transform;
         }
 
     }
@@ -40,6 +42,7 @@ public class RespawnPoint : MonoBehaviour
     {
         animorte = true;
         p.GetComponent<DeathEffect>().Die();
+        virtualCamera.Follow = null;
         player.transform.position = respawnPoint.transform.position;
     }
 }

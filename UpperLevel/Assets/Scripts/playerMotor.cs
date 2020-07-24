@@ -172,7 +172,7 @@ public class playerMotor : MonoBehaviour
 
 
             }
-            if (i>1)
+            if (i>=1)
             {
                 i = 0;
                 return true;

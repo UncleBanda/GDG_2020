@@ -7,7 +7,6 @@ public class NewRespawn : MonoBehaviour
     public GameObject player;
     public RespawnPoint respawn;
     public string InputNumber;
-    public bool hi;
 
     private void OnTriggerEnter(Collider other)
     {

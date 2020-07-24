@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AttivaRotella.cs" />
+    <Compile Include="Assets\CheatPosition.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Grid\MAST_Grid_Component.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Grid\MAST_Grid_Manager.cs" />
     <Compile Include="Assets\FSP\MAST\Scripts\Interface\MAST_Hotkeys.cs" />

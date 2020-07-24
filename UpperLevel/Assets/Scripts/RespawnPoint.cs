@@ -38,8 +38,11 @@ public class RespawnPoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        animorte = true;
-        p.GetComponent<DeathEffect>().Die();
-        player.transform.position = respawnPoint.transform.position;
+        if (other.name == player.name)
+        {
+            animorte = true;
+            p.GetComponent<DeathEffect>().Die();
+            player.transform.position = respawnPoint.transform.position;
+        }
     }
 }

@@ -34,8 +34,7 @@ public class StairsActivate : MonoBehaviour
                 stairs1.GetComponent<Animator>().enabled = true;
                 stairs2.GetComponent<Animator>().enabled = true;
                 stairs3.GetComponent<Animator>().enabled = true;
-                collider.gameObject.Destroy();
-
+                Destroy(collider);
             }
 
         }

@@ -108,9 +108,24 @@ public class playerMotor : MonoBehaviour
                 
                 //animator.SetTrigger("atterra");
                 jump = false;
+                UnityEngine.Debug.Log("asdas");
+                
 
 
                 
+            }
+            // facoltativo, se non piace togliamo
+            if (rb.velocity.y < 0f )
+            {
+
+
+                //animator.SetTrigger("atterra");
+                
+                
+                rb.AddForce(Vector3.up * -0.4f, ForceMode.Impulse);
+
+
+
             }
         }
         //parte vecchia con il character controller 

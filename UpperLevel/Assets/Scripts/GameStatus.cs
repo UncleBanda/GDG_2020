@@ -6,8 +6,8 @@ public class GameStatus : MonoBehaviour
 {
     static protected int phase = 0;
     static protected float maxAbility= 10f;
-    [SerializeField] static protected Transform respawnUp = null;
-    [SerializeField] static protected Transform respawnDown = null;
+    [SerializeField] static protected Vector3 respawnUp ;
+    [SerializeField] static protected Vector3 respawnDown ;
     // Start is called before the first frame update    
     void Start()
     {
@@ -40,12 +40,12 @@ public class GameStatus : MonoBehaviour
         return maxAbility;
     }
 
-    public static void SetRespDown(Transform value)
+    public static void SetRespDown(Vector3 value)
     {
         respawnDown = value;
     }
 
-    public static Transform GetRespDown()
+    public static Vector3 GetRespDown()
     {
         return respawnDown;
     }

@@ -15,12 +15,21 @@ public class animCurve : MonoBehaviour
     public float speed = 1f;
     private float valoreTempo = 0f;
     private TimeManager timemanager;
+    public bool invert=false;
 
     void Start()
     {
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
         startPos = this.transform.position;
-        arrivo = startPos.y + offset;
+        if (invert == false) {
+            arrivo = startPos.y + offset;
+        }
+        else
+        {
+            arrivo = startPos.y - offset;
+        }
+        
+        
         if (x)
         {
             curve = new AnimationCurve(new Keyframe(0, startPos.x), new Keyframe(offset / speed, startPos.x + offset));

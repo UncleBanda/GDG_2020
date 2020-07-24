@@ -11,6 +11,7 @@ public class StairsActivate : MonoBehaviour
     public GameObject stairs1;
     public GameObject stairs2;
     public GameObject stairs3;
+    public GameObject collider;
 
     public GameObject rotella;
 
@@ -33,6 +34,7 @@ public class StairsActivate : MonoBehaviour
                 stairs1.GetComponent<Animator>().enabled = true;
                 stairs2.GetComponent<Animator>().enabled = true;
                 stairs3.GetComponent<Animator>().enabled = true;
+                collider.gameObject.Destroy();
 
             }
 

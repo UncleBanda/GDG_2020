@@ -6,6 +6,7 @@ public class NewRespawn : MonoBehaviour
 {
     public GameObject player;
     public RespawnPoint respawn;
+    public string InputNumber;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,13 @@ public class NewRespawn : MonoBehaviour
         {
             respawn.SetRespawnPoint(gameObject.transform.position);
             Debug.Log("spawner");
+        }
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(InputNumber))
+        {
+            player.transform.position = gameObject.transform.position;
         }
     }
 }

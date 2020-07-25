@@ -115,7 +115,7 @@ public class playerMotor : MonoBehaviour
                 
             }
             // facoltativo, se non piace togliamo
-            if (rb.velocity.y < 0f )
+           /* if (rb.velocity.y < 0f )
             {
 
 
@@ -126,7 +126,7 @@ public class playerMotor : MonoBehaviour
 
 
 
-            }
+            }*/
         }
         //parte vecchia con il character controller 
         /*if (controller.isGrounded)

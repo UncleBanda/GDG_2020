@@ -21,6 +21,7 @@ public class LeverActivate : MonoBehaviour
     void Start()
     {
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
+
     }
 
     void Update()
@@ -47,7 +48,7 @@ public class LeverActivate : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
-
+     
         if (timer < 0)
         {
             sx = 0;

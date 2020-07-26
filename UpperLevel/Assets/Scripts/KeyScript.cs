@@ -18,15 +18,14 @@ void Update()
     {
         transform.Rotate(0, 90 * Time.deltaTime, 0);
 
-        /*if (entered)
+        if (entered)
         {
-            if (Input.KeyDown(Input.KeyCode.I)) { 
-            Destroy(gameObject);
+            if (Input.GetKeyDown(KeyCode.I)) { 
 
-            Debug.Log("diomerda");
+
             timeManager.GetComponent<TimeSceneManager>().SceneChange(level);
         }
-        }*/
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

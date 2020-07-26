@@ -8,8 +8,9 @@ public class GemScript : MonoBehaviour
     public GameObject player;
 
     private bool entrato = false;
+    
     // Update is called once per frame
-
+    
 
     void Update()
     {
@@ -24,6 +25,7 @@ public class GemScript : MonoBehaviour
             entrato = true;
             Debug.Log("entrato");
             player.GetComponent<PlayerTimeManagement>().GemBonus(1);
+            
         }
         
     }

@@ -10,6 +10,8 @@ public class FinalPuzzle : MonoBehaviour
     private bool start = false;
     public float timer = 1.5f;
     public int sx = 0;
+    public GameObject leva1;
+    public GameObject leva2;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +24,11 @@ public class FinalPuzzle : MonoBehaviour
     {
         if (entered == true)
         {
-            if (Input.GetKey(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.I))
             {
-                //parte animazione
-                sx = 1;
-                start = true;
+                
+
+                Ingranaggio();
 
             }
         }
@@ -43,6 +45,8 @@ public class FinalPuzzle : MonoBehaviour
             start = false;
 
             //finisce animazione
+            leva1.GetComponent<Animator>().SetBool("TimeEnded", true);
+            leva2.GetComponent<Animator>().SetBool("TimeEnded", true);
         }
     }
 
@@ -60,5 +64,26 @@ public class FinalPuzzle : MonoBehaviour
         {
             entered = false;
         }
+    }
+
+    void Ingranaggio()
+    {
+        if (sx == 0)
+        {
+            sx = 1;
+            start = true;
+
+            leva1.GetComponent<Animator>().enabled = true;
+            leva1.GetComponent<Animator>().SetBool("TimeEnded", false);
+            leva2.GetComponent<Animator>().enabled = true;
+            leva2.GetComponent<Animator>().SetBool("TimeEnded", false);
+        }else{        
+            leva1.GetComponent<Animator>().SetBool("TimeEnded", true);
+            leva2.GetComponent<Animator>().SetBool("TimeEnded", true);
+            sx = 0;
+            timer = 1.5f;
+            start = false;
+        }
+
     }
 }

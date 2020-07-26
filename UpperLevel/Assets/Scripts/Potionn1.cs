@@ -13,12 +13,15 @@ public class Potionn1 : MonoBehaviour
     GameObject principessa;
     public Quaternion currentAngle;
     public bool isEntered = false;
+    public bool arrivato;
+    public GameObject sugg;
     // Start is called before the first frame update
     void Start()
     {
         ph = GameStatus.GetPhase();
         currentAngle = Quaternion.Euler(0, 0, ph * 45);
         principessa = GameObject.Find("principessinarig1");
+        sugg.active = false;
        
     }
 
@@ -26,7 +29,7 @@ public class Potionn1 : MonoBehaviour
     void Update()
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, currentAngle, 0.1f);
-        if (Input.GetKeyDown(KeyCode.I) && isEntered)
+        if (Input.GetKeyDown(KeyCode.I) && isEntered && arrivato)
         {
             ph += 1;
             if (ph > 1)
@@ -39,6 +42,12 @@ public class Potionn1 : MonoBehaviour
             GameStatus.SetPhase(ph);
 
         }
+        else if (isEntered && arrivato == false)
+        {
+            sugg.active = true;
+        }
+        else
+            sugg.active = false;
 
     }
 

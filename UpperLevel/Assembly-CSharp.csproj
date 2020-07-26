@@ -158,6 +158,7 @@
     <Compile Include="Assets\Scripts\acidPhase.cs" />
     <Compile Include="Assets\Scripts\animCurve.cs" />
     <Compile Include="Assets\Scripts\costruttiva.cs" />
+    <Compile Include="Assets\Scripts\dialogo.cs" />
     <Compile Include="Assets\Scripts\downacid.cs" />
     <Compile Include="Assets\Scripts\generalLev.cs" />
     <Compile Include="Assets\Scripts\lancetta.cs" />

@@ -42,7 +42,12 @@ PrefabInstance:
     - target: {fileID: 1514495064339150234, guid: 9a253e4a29c4f8d49bf02fec4ac92695,
         type: 3}
       propertyPath: m_Name
-      value: acido (5)
+      value: acido time
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514495064339150236, guid: 9a253e4a29c4f8d49bf02fec4ac92695,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1514495064339150239, guid: 9a253e4a29c4f8d49bf02fec4ac92695,
         type: 3}

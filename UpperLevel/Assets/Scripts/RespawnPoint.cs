@@ -48,7 +48,7 @@ public class RespawnPoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name != rotella.name) { 
+        if (other.name == p.name) { 
         animorte = true;
         motor.enabled = false;
         p.GetComponent<DeathEffect>().Die();
@@ -56,7 +56,7 @@ public class RespawnPoint : MonoBehaviour
         virtualCamera.Follow = null;
         player.transform.position = respawnPoint.transform.position;
         }
-        else
+        else if (other.name == rotella.name)
         {
             rotella.transform.position = repositionRotella.transform.position;
             rotella.GetComponent<Rigidbody>().velocity= Vector3.zero;

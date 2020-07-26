@@ -159,9 +159,9 @@ public class playerMotor : MonoBehaviour
        // if (rb.velocity.y <0f)
       //  {
 
-            UnityEngine.Debug.DrawRay(Grounded1.transform.position, -Vector3.up * 0.5f, Color.yellow);
-            UnityEngine.Debug.DrawRay(Grounded2.transform.position, -Vector3.up * 0.5f, Color.yellow);
-            UnityEngine.Debug.DrawRay(Grounded3.transform.position, -Vector3.up * 0.5f, Color.yellow);
+            UnityEngine.Debug.DrawRay(Grounded1.transform.position, -Vector3.up * 0.25f, Color.yellow);
+            UnityEngine.Debug.DrawRay(Grounded2.transform.position, -Vector3.up * 0.25f, Color.yellow);
+            UnityEngine.Debug.DrawRay(Grounded3.transform.position, -Vector3.up * 0.25f, Color.yellow);
             //rb.velocity -= Vector3.up * 1.5f;
             RaycastHit hit1;
             RaycastHit hit2;
@@ -169,19 +169,19 @@ public class playerMotor : MonoBehaviour
             int i = 0;
             
 
-            if (Physics.Raycast(Grounded1.transform.position, -Vector3.up, out hit1, 0.5f))
+            if (Physics.Raycast(Grounded1.transform.position, -Vector3.up, out hit1, 0.25f))
             {
                 i++;
                 
                
             }
-            if (Physics.Raycast(Grounded2.transform.position, -Vector3.up, out hit2, 0.5f))
+            if (Physics.Raycast(Grounded2.transform.position, -Vector3.up, out hit2, 0.25f))
             {
                 i++;
 
 
             }
-            if (Physics.Raycast(Grounded3.transform.position, -Vector3.up, out hit3, 0.5f))
+            if (Physics.Raycast(Grounded3.transform.position, -Vector3.up, out hit3, 0.25f))
             {
                 i++;
 

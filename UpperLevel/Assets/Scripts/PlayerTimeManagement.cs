@@ -75,7 +75,7 @@ public class PlayerTimeManagement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.O)) //Stop Time when Q is pressed
+        if (Input.GetKeyDown(KeyCode.O))
         {
             Stoppate();
 

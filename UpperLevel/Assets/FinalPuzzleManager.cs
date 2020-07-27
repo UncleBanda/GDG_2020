@@ -8,7 +8,7 @@ public class FinalPuzzleManager : MonoBehaviour
     public GameObject platform;
     public GameObject sxRot;
     public GameObject dxRot;
-   
+    public bool stillRotating = false;
     public FinalPuzzle levaSx;
     public FinalPuzzle_Dx levaDx;
 
@@ -19,9 +19,11 @@ public class FinalPuzzleManager : MonoBehaviour
             BigR.isMoving= true;
             sxRot.GetComponent<Animator>().enabled = true;
             dxRot.GetComponent<Animator>().enabled = true;
+
         }else if (levaSx.sx != 1 || levaDx.dx != 1)
         {
             BigR.isMoving = false;
+
         }
 
         if (levaSx.sx == 1)

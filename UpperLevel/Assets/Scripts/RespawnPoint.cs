@@ -42,10 +42,7 @@ public class RespawnPoint : MonoBehaviour
 
     }
 
-    public void SetRespawnPoint(Vector3 positon)
-    {
-        respawnPoint.transform.position = positon;
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == p.name) { 

@@ -5,14 +5,17 @@ using UnityEngine;
 public class NewRespawn : MonoBehaviour
 {
     public GameObject player;
-    public RespawnPoint respawn;
+    public GameObject respawnPoint;
     public string InputNumber;
 
+    void Start() {
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == player.name)
         {
-            respawn.SetRespawnPoint(gameObject.transform.position);
+           respawnPoint.transform.position = this.gameObject.transform.position;
             Debug.Log("spawner");
         }
     }

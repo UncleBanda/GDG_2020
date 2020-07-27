@@ -1,4 +1,4 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2019.3.13f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.3.13f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: preprocess
   insize=1579 outsize=233 ok=1
@@ -157,7 +157,7 @@ Cmd: preprocessCompute
 Cmd: preprocess
   insize=1012 outsize=306 ok=1
 Cmd: preprocess
-  insize=10224 outsize=6196 ok=1
+  insize=10433 outsize=6272 ok=1
 Cmd: preprocess
   insize=8019 outsize=2766 ok=1
 Cmd: preprocess
@@ -211,7 +211,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=2420 outsize=1129 ok=1
 Cmd: preprocess
-  insize=39957 outsize=1718 ok=1
+  insize=39957 outsize=1717 ok=1
 Cmd: preprocess
   insize=73099 outsize=3727 ok=1
 Cmd: preprocess
@@ -236,3 +236,7 @@ Cmd: preprocess
   insize=64469 outsize=3676 ok=1
 Cmd: preprocess
   insize=27779 outsize=1616 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2364 outsize=1706 kw=_RECEIVE_SHADOWS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+
+Quitting shader compiler process

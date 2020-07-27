@@ -29,7 +29,7 @@ public class playerMotor : MonoBehaviour
     static Animator animator;
     public bool jump= false;
     private bool isGroundedBool;
-
+    public AudioManager audiomanager;
   
       
                 
@@ -39,6 +39,7 @@ public class playerMotor : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         col = GetComponent<BoxCollider>();
+        FindObjectOfType<AudioManager>().Play("sofferenza");
         //setSpheres();
     }
 

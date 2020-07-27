@@ -12,6 +12,7 @@ public class lancetta : MonoBehaviour
     public float waitTime = 1.0f;
     public float currentTime = 0.0f;
     public float secondAngle = 0;
+    public float SliderValue = 600;
     bool isMoving = false;
     bool isEntered;
 
@@ -37,9 +38,9 @@ public class lancetta : MonoBehaviour
             }
             else
             {
-                float condition = (240 / 12) * (secondAngle / 30);
+                float condition = (SliderValue / 12) * (secondAngle / 30);
                 Debug.Log(condition);
-                if (slider.value <= (condition + 240 / 24) && slider.value >= (condition - 240 / 24))
+                if (slider.value <= (condition + SliderValue / 24) && slider.value >= (condition - SliderValue / 24))
                 {
                     Debug.Log("you winner bibr");
                 }

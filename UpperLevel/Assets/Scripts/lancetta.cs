@@ -12,8 +12,10 @@ public class lancetta : MonoBehaviour
     public float waitTime = 1.0f;
     public float currentTime = 0.0f;
     public float secondAngle = 0;
+    public BigR bigRbool;
     bool isMoving = false;
     bool isEntered;
+    public bool winningLancetta = false;
 
     void Start()
     {
@@ -37,14 +39,24 @@ public class lancetta : MonoBehaviour
             }
             else
             {
-                float condition = (240 / 12) * (secondAngle / 30);
-                Debug.Log(condition);
-                if (slider.value <= (condition + 240 / 24) && slider.value >= (condition - 240 / 24))
+                float condition = (slider.maxValue / 12) * (secondAngle / 30);
+               // Debug.Log(condition);
+                if (slider.value <= (condition + slider.maxValue / 24) && slider.value >= (condition - slider.maxValue / 24))
                 {
                     Debug.Log("you winner bibr");
+                    winningLancetta = true;
                 }
+                /*else if (slider.value >= (condition + slider.maxValue / 24) && slider.value <= (condition - slider.maxValue / 24))
+                {
+                    winningLancetta = false;
+                }*/
+                
                 isMoving = false;
             }
+        }
+        if(winningLancetta==true && bigRbool.winningBigR == true)
+        {
+            Debug.Log("FINE DEMO, VITTORIA");
         }
         if (isMoving == true)
         {

@@ -16,7 +16,7 @@ public class leverFin : MonoBehaviour
         currentAngle = Quaternion.Euler(0, 0, ph * 45);
         principessa = GameObject.Find("principessinarig1");
         lancetta = GameObject.Find("Rotella (3)");
-        Debug.Log("" + principessa.name);
+
     }
 
     // Update is called once per frame

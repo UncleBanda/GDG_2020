@@ -9,6 +9,7 @@ public class LeverActivate : MonoBehaviour
     public GameObject levaUp;
     public GameObject levaMiddle;
     public GameObject levaDown;
+    public LeverActivateDx dx;
 
 
 
@@ -28,7 +29,7 @@ public class LeverActivate : MonoBehaviour
     {
         if(isInside == true)
         {
-            if (Input.GetKey(KeyCode.L))
+            if (Input.GetKey(KeyCode.I))
             {
                 levaUp.GetComponent<Animator>().enabled = true;
                 levaUp.GetComponent<Animator>().SetBool("TimeEnded", false);
@@ -49,7 +50,7 @@ public class LeverActivate : MonoBehaviour
         }
 
      
-        if (timer < 0)
+        if (timer < 0&& dx.dx!=1)
         {
             sx = 0;
             timer = 1.5f;

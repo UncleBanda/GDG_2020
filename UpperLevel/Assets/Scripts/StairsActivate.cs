@@ -15,6 +15,7 @@ public class StairsActivate : MonoBehaviour
     public GameObject rotella;
 
     private bool isEntered;
+    public AudioSource riproduci;
 
     void Update()
     {
@@ -34,6 +35,8 @@ public class StairsActivate : MonoBehaviour
                 stairs2.GetComponent<Animator>().enabled = true;
                 stairs3.GetComponent<Animator>().enabled = true;
                 Destroy(collider);
+
+                riproduci.Play();
 
             }
 

@@ -9,6 +9,7 @@ public class BigR : MonoBehaviour
     public float currentTime = 0.0f;
     public float secondAngle = 0;
     public bool isMoving = false;
+    public bool winningBigR = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class BigR : MonoBehaviour
             if (this.transform.rotation.z == 0)
             {
                 UnityEngine.Debug.Log("yay");
+                winningBigR = true;
             }
         }
 

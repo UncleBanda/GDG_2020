@@ -19,7 +19,7 @@ public class lancetta : MonoBehaviour
 
     void Start()
     {
-
+        UnityEngine.Debug.Log("" + slider.maxValue);
         slider = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeSceneManager>().slider;
 
 

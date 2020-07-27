@@ -10,6 +10,8 @@ public class threelev : MonoBehaviour
     int ph;
     GameObject acid;
     GameObject stal;
+
+    public AudioSource riproduci;
     //public float arr;
     //public float dist = 10f;
     // Start is called before the first frame update
@@ -29,6 +31,7 @@ public class threelev : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, currentAngle, 0.1f);
         if (Input.GetKeyDown(KeyCode.I) && isEntered)
         {
+            riproduci.Play();
             ph += 1;
             if (ph > 1)
             {

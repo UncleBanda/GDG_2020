@@ -20,6 +20,8 @@ public class generalLev : MonoBehaviour
     public float dist = 12f;
     public Vector3 startPos;
     AnimationCurve curve;
+
+    public AudioSource riproduci;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,5 +83,7 @@ public class generalLev : MonoBehaviour
 
         currentAngle = Quaternion.Euler(state * 45, -90, 0);
         connected.GetComponent<leverplat>().currentAngle = currentAngle;
+        riproduci.Play();
+
     }
 }

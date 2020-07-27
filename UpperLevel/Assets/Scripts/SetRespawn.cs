@@ -17,14 +17,14 @@ public class SetRespawn : MonoBehaviour
         {
             if (GameStatus.GetRespDown() != Vector3.zero)
             {
-                UnityEngine.Debug.Log("ciao");
+                UnityEngine.Debug.Log("setdown" + GameStatus.GetRespDown());
                 spawnPoint.transform.position = GameStatus.GetRespDown();
                 player.transform.position = spawnPoint.transform.position;
             }
         }
         else if (GameStatus.GetRespUp() != Vector3.zero)
         {
-            UnityEngine.Debug.Log("ciao");
+            UnityEngine.Debug.Log("setup"+GameStatus.GetRespUp());
             spawnPoint.transform.position = GameStatus.GetRespUp();
             player.transform.position = spawnPoint.transform.position;
         }
@@ -48,12 +48,12 @@ public class SetRespawn : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 GameStatus.SetRespDown(this.transform.position);
-                UnityEngine.Debug.Log("" + GameStatus.GetRespDown());
+                UnityEngine.Debug.Log("down" + GameStatus.GetRespDown());
             }
             else
             {
                 GameStatus.SetRespUp(this.transform.position);
-                UnityEngine.Debug.Log("" + GameStatus.GetRespUp());
+                UnityEngine.Debug.Log("up" + GameStatus.GetRespUp());
             }
             Destroy(this);
         }

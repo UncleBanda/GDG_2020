@@ -12,6 +12,7 @@ public class KeyScript : MonoBehaviour
     public GameObject timeManager;
     public int level;
     private bool entered=false;
+    private bool countdown = false;
 
     // Update is called once per frame
 void Update()
@@ -20,8 +21,11 @@ void Update()
 
         if (entered)
         {
-            if (Input.GetKeyDown(KeyCode.I)) { 
+            if (Input.GetKeyDown(KeyCode.I)) {
 
+
+             countdown = true;
+             GameStatus.SetCount(countdown);
 
             timeManager.GetComponent<TimeSceneManager>().SceneChange(level);
         }

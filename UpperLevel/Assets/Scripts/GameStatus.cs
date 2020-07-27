@@ -8,6 +8,9 @@ public class GameStatus : MonoBehaviour
     static protected float maxAbility= 10f;
     [SerializeField] static protected Vector3 respawnUp ;
     [SerializeField] static protected Vector3 respawnDown ;
+    static protected bool trovato = false;
+    static protected bool countdown = false;
+    static protected bool raccolta = false;
     // Start is called before the first frame update    
     void Start()
     {
@@ -30,6 +33,7 @@ public class GameStatus : MonoBehaviour
         return phase;
     }
 
+
     public static void SetMaxAbility(float value)
     {
         maxAbility = value;
@@ -40,6 +44,7 @@ public class GameStatus : MonoBehaviour
         return maxAbility;
     }
 
+
     public static void SetRespDown(Vector3 value)
     {
         respawnDown = value;
@@ -48,5 +53,50 @@ public class GameStatus : MonoBehaviour
     public static Vector3 GetRespDown()
     {
         return respawnDown;
+    }
+
+
+    public static void SetRespUp(Vector3 value)
+    {
+        respawnUp = value;
+    }
+
+    public static Vector3 GetRespUp()
+    {
+        return respawnUp;
+    }
+
+
+    public static void SetTrovato(bool value)
+    {
+        trovato = value;
+        UnityEngine.Debug.Log("trovato=" + value);
+    }
+
+    public static bool GetTrovato()
+    {
+        return trovato;
+    }
+
+    public static void SetCount(bool value)
+    {
+        countdown = value;
+        UnityEngine.Debug.Log("c=" + countdown);
+    }
+
+    public static bool GetCount()
+    {
+        return countdown;
+    }
+
+    public static void SetRaccolta(bool value)
+    {
+        raccolta = value;
+        UnityEngine.Debug.Log("racc=" + raccolta);
+    }
+
+    public static bool GetRaccolta()
+    {
+        return raccolta;
     }
 }

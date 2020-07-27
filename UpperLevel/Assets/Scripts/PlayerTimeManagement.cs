@@ -15,6 +15,8 @@ public class PlayerTimeManagement : MonoBehaviour
     public GameObject Background2;
     public GameObject FillArea;
 
+    public AudioSource riproduci;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +80,7 @@ public class PlayerTimeManagement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
         {
             Stoppate();
-
+            riproduci.Play();
         }
 
         if (timemanager.TimeIsStopped)

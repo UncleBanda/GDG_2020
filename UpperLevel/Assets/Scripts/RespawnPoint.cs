@@ -5,6 +5,7 @@ using Cinemachine;
 using System.Diagnostics;
 using System.Collections.Specialized;
 
+
 public class RespawnPoint : MonoBehaviour
 {
     [SerializeField] private Transform player;

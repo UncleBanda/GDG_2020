@@ -25,6 +25,7 @@ public class KeyPortaScript : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
             chiaveRaccolta = true;
+            GameStatus.SetRaccolta(chiaveRaccolta);
 
         }
 

@@ -12,6 +12,7 @@ public class Trovato : MonoBehaviour
         if(other.name == player.name)
         {
             trovato = true;
+            GameStatus.SetTrovato(trovato);
         }
     }
 }

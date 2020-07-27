@@ -14,6 +14,14 @@ public class OpenDoor : MonoBehaviour
     {
         if (entrato == true)
         {
+            if (GameStatus.GetRaccolta() == true && Input.GetKeyDown(KeyCode.I))
+            {
+
+            }
+            else
+            {
+
+            }
             //if (chiave == true && premo pulsante I){ porta.GetComponent<Animator>.enabled=true; }
             //else {"Mi disp non hai la chiave"}
         }

@@ -13,7 +13,7 @@ public class Potionn1 : MonoBehaviour
     GameObject principessa;
     public Quaternion currentAngle;
     public bool isEntered = false;
-    public bool arrivato;
+    private bool arrivato;
     public GameObject sugg;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class Potionn1 : MonoBehaviour
         currentAngle = Quaternion.Euler(0, 0, ph * 45);
         principessa = GameObject.Find("principessinarig1");
         sugg.active = false;
+        arrivato = GameStatus.GetTrovato();
        
     }
 

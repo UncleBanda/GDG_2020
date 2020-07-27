@@ -5812,6 +5812,15 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: emo
+    clip: {fileID: 8300000, guid: 1069e11671ce8494aa511a1bdea2ccb9, type: 3}
+    volume: 0.581
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &373905067
 Transform:
   m_ObjectHideFlags: 0
@@ -16399,7 +16408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.00050271064, y: 0.9983306, z: -0.0037153005, w: -0.057636756}
-  m_LocalPosition: {x: 181.82256, y: -0.70282257, z: -23.727087}
+  m_LocalPosition: {x: 181.91226, y: -0.7029519, z: -23.73748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29776,7 +29785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759718482}
   m_LocalRotation: {x: -0.0022716443, y: 0.665171, z: -0.0029825843, w: -0.7466817}
-  m_LocalPosition: {x: 21.818449, y: 3.0388246, z: -3.8893588}
+  m_LocalPosition: {x: 21.8036, y: 3.0386398, z: -4.017511}
   m_LocalScale: {x: 3.3333323, y: 3.333333, z: 3.3333323}
   m_Children: []
   m_Father: {fileID: 837180856}
@@ -33423,7 +33432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970811063}
   m_LocalRotation: {x: 0.00050271064, y: 0.9983306, z: -0.0037153005, w: -0.057636756}
-  m_LocalPosition: {x: 181.82256, y: -0.70282257, z: -23.727087}
+  m_LocalPosition: {x: 181.91226, y: -0.7029519, z: -23.73748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2111482399}

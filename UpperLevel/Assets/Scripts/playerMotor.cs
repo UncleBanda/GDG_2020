@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMotor : MonoBehaviour
 {
@@ -39,7 +40,18 @@ public class playerMotor : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         col = GetComponent<BoxCollider>();
-        FindObjectOfType<AudioManager>().Play("sofferenza");
+        UnityEngine.Debug.Log("" + SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            FindObjectOfType<AudioManager>().StopPlaying("emo");
+            FindObjectOfType<AudioManager>().Play("sofferenza");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("emo");
+            FindObjectOfType<AudioManager>().StopPlaying("sofferenza");
+        }   
+            
         //setSpheres();
     }
 

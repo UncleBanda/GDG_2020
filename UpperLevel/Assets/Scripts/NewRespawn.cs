@@ -10,6 +10,7 @@ public class NewRespawn : MonoBehaviour
     public string InputNumber;
 
     void Start() {
+        
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (GameStatus.GetRespDown() != Vector3.zero)

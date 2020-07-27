@@ -15,6 +15,8 @@ public class Potionn1 : MonoBehaviour
     public bool isEntered = false;
     private bool arrivato;
     public GameObject sugg;
+
+    public AudioSource riproduci;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,7 @@ public class Potionn1 : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, currentAngle, 0.1f);
         if (Input.GetKeyDown(KeyCode.I) && isEntered && arrivato)
         {
+            riproduci.Play();
             ph += 1;
             if (ph > 1)
             {

@@ -9,6 +9,7 @@ public class leverFin : MonoBehaviour
     public Quaternion currentAngle;
     public bool isEntered = false;
     GameObject lancetta;
+    public AudioSource riproduci;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class leverFin : MonoBehaviour
             ph = ph*-1;
             
             currentAngle = Quaternion.Euler(0, 0, ph * 45);
-
+            riproduci.Play();
 
             
 

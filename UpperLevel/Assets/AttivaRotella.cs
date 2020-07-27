@@ -13,6 +13,7 @@ public class AttivaRotella : MonoBehaviour
 
     bool isInside = false;
 
+    public AudioSource riproduci;
     void Update()
     {
         if (isInside == true)
@@ -24,6 +25,7 @@ public class AttivaRotella : MonoBehaviour
                 //levaDown.GetComponent<Animator>().enabled = true;
 
                 rotella.constraints &= ~RigidbodyConstraints.FreezePositionY;
+                riproduci.Play();
             }
 
         }

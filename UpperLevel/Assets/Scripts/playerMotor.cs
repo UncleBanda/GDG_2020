@@ -11,7 +11,7 @@ using UnityEngine;
 public class playerMotor : MonoBehaviour
 {
     private CharacterController controller;
-    private float saltoTime=1f;
+    public float saltoTime=0.8f;
     private bool salta=false;
     public bool grabEngine = false;
 
@@ -27,7 +27,7 @@ public class playerMotor : MonoBehaviour
     public GameObject Grounded2;
     public GameObject Grounded3;
     static Animator animator;
-    public bool jump= false;
+    public bool jump=false;
     private bool isGroundedBool;
     public AudioManager audiomanager;
   
@@ -53,16 +53,7 @@ public class playerMotor : MonoBehaviour
         
         transform.Translate(Vector3.forward * Mathf.Abs(translation));
 
-       /* if (salta == true)
-        {
-            saltoTime -= Time.deltaTime;
-        }
-
-        if (saltoTime < 0)
-        {
-            salta = false;
-            saltoTime = 1f;
-        }*/
+      
 
         // da considerare per miglioramenti al movimento
         //rb.AddForce(Vector3.forward * horizontal * speed);
@@ -85,50 +76,31 @@ public class playerMotor : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-        if (Input.GetButtonDown("Jump") && jump ==false )
+        if (jump==false)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            animator.SetTrigger("isJumping");
-            
-            jump = true;
+            if (Input.GetKeyDown("space")) 
+            { 
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                animator.SetTrigger("isJumping");
 
-            //UnityEngine.Debug.Log(""+ IsGrounded());
+                jump = true;
+            }
 
-
-            // salta = true;
-        }
-        animator.SetBool("Atterra_bool",isGroundedBool);
-
-        if (jump)
-        {
+        }else if (jump==true)
+         {
 
             
             if (rb.velocity.y<0f && isGroundedBool==true)
             {
-                
-                
-                //animator.SetTrigger("atterra");
+
                 jump = false;
+                saltoTime = 0.8f;
                 UnityEngine.Debug.Log("asdas");
-                
-
-
-                
+                                
             }
-            // facoltativo, se non piace togliamo
-           /* if (rb.velocity.y < 0f )
-            {
 
-
-                //animator.SetTrigger("atterra");
-                
-                
-                rb.AddForce(Vector3.up * -0.4f, ForceMode.Impulse);
-
-
-
-            }*/
         }
+        animator.SetBool("Atterra_bool", isGroundedBool);
         //parte vecchia con il character controller 
         /*if (controller.isGrounded)
         {
@@ -150,6 +122,16 @@ public class playerMotor : MonoBehaviour
         //moveVector.x = horizontal * speed;
 
         controller.Move(moveVector*Time.deltaTime);*/
+        if (jump == true)
+        {
+            saltoTime -= Time.deltaTime;
+        }
+
+        if (saltoTime < 0)
+        {
+            jump = false;
+            saltoTime = 0.8f;
+        }
     }
 
   
@@ -201,5 +183,5 @@ public class playerMotor : MonoBehaviour
        // }
        // else return false;
     }
-    
+
 }

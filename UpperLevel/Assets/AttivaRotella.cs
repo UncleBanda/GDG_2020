@@ -5,9 +5,9 @@ using UnityEngine;
 public class AttivaRotella : MonoBehaviour
 {
     public GameObject player;
-    //public GameObject levaUp;
-    //public GameObject levaMiddle;
-    //public GameObject levaDown;
+    public GameObject levaUp;
+   public GameObject levaMiddle;
+
 
     public Rigidbody rotella;
 
@@ -20,9 +20,9 @@ public class AttivaRotella : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.I))
             {
-                //levaUp.GetComponent<Animator>().enabled = true;
-                //levaMiddle.GetComponent<Animator>().enabled = true;
-                //levaDown.GetComponent<Animator>().enabled = true;
+                levaUp.GetComponent<Animator>().enabled = true;
+                levaMiddle.GetComponent<Animator>().enabled = true;
+
 
                 rotella.constraints &= ~RigidbodyConstraints.FreezePositionY;
                 riproduci.Play();

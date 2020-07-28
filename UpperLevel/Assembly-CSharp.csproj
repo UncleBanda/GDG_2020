@@ -114,6 +114,12 @@
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\DemoManager.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\FairyDustRandomPosition.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\FairyMeteorAddForceDemo.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Fireball.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Spin.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Test.cs" />
     <Compile Include="Assets\PlayerPush.cs" />
     <Compile Include="Assets\RespawnRotella.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\OverTheShoulderAim\ActivateOnKeypress.cs" />
@@ -235,6 +241,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\PinwheelFantasyEffect\README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Polygonal Particles\Assets\Shaders\GradientBackgroundShader.shader" />
     <None Include="Assets\FXIFIED\common\Shaders\RimLight.shader" />

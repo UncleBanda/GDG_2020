@@ -14,6 +14,9 @@ public class FinalPuzzle : MonoBehaviour
     public GameObject leva2;
     public FinalPuzzle_Dx levaDx;
 
+    public AudioSource riproduci;
+    public AudioSource inceppato;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,7 @@ public class FinalPuzzle : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.I))
             {
 
-
+                
                 Ingranaggio();
 
                 
@@ -58,6 +61,7 @@ public class FinalPuzzle : MonoBehaviour
             //finisce animazione
             leva1.GetComponent<Animator>().SetBool("TimeEnded", true);
             leva2.GetComponent<Animator>().SetBool("TimeEnded", true);
+            inceppato.Play();
         }
     }
 
@@ -83,7 +87,7 @@ public class FinalPuzzle : MonoBehaviour
         {
             sx = 1;
 
-
+            riproduci.Play();
             leva1.GetComponent<Animator>().enabled = true;
             leva1.GetComponent<Animator>().SetBool("TimeEnded", false);
             leva2.GetComponent<Animator>().enabled = true;
@@ -94,6 +98,7 @@ public class FinalPuzzle : MonoBehaviour
             sx = 0;
             timer = 1.5f;
             start = false;
+            inceppato.Play();
         }
 
     }

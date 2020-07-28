@@ -11,11 +11,12 @@ public class TimeSceneManager : MonoBehaviour
     public Slider slider;
     public int level;
     public static int cont = 0;
+    private TimeManager timemanager;
 
     void Start()
     {
         slider.value = 0;
-    
+        timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
 
     }
 
@@ -27,8 +28,10 @@ public class TimeSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value += (Time.deltaTime);
-
+        if (timemanager.TimeIsStopped == false)
+        {
+            slider.value += (Time.deltaTime);
+        }
         
         if (slider.value >= slider.maxValue)
         {

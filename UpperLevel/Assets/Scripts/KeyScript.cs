@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KeyScript : MonoBehaviour
 {
@@ -24,10 +25,21 @@ public class KeyScript : MonoBehaviour
     {
         sugg.active = false;
         aspetta.active = false;
-        if (GameStatus.GetCount() == true)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            startTimer = true;
+            if (GameStatus.GetCount() == true)
+            {
+                startTimer = true;
+            }
         }
+        else
+        {
+            if (GameStatus.GetCountUp() == true)
+            {
+                startTimer = true;
+            }
+        }
+        
     }
 
     // Update is called once per frame
@@ -46,7 +58,15 @@ void Update()
             timer = 60;
             startTimer = false;
             countdown = false;
-            GameStatus.SetCount(countdown);
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                GameStatus.SetCount(countdown);
+            }
+            else
+            {
+                GameStatus.SetCountUp(countdown);
+            }
+           
         }
 
         if (entered)
@@ -66,7 +86,17 @@ void Update()
 
 
              countdown = true;
-             GameStatus.SetCount(countdown);
+                if (SceneManager.GetActiveScene().buildIndex == 1)
+                {
+                    GameStatus.SetCount(countdown);
+                }
+                else
+                {
+                    GameStatus.SetCountUp(countdown);
+                }
+
+
+               
 
             timeManager.GetComponent<TimeSceneManager>().SceneChange(level);
         }

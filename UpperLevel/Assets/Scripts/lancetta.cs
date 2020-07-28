@@ -16,6 +16,8 @@ public class lancetta : MonoBehaviour
     bool isMoving = false;
     bool isEntered;
     public bool winningLancetta = false;
+    public GameObject Rotellona;
+    public GameObject Piattaforma;
 
     void Start()
     {
@@ -57,6 +59,8 @@ public class lancetta : MonoBehaviour
         if(winningLancetta==true && bigRbool.winningBigR == true)
         {
             Debug.Log("FINE DEMO, VITTORIA");
+            Rotellona.GetComponent<Animator>().enabled=true;
+            Piattaforma.GetComponent<Animator>().enabled = true;
         }
         if (isMoving == true)
         {

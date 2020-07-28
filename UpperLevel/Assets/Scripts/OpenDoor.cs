@@ -16,12 +16,9 @@ public class OpenDoor : MonoBehaviour
         {
             if (GameStatus.GetRaccolta() == true && Input.GetKeyDown(KeyCode.I))
             {
-
+                porta.GetComponent<Animator>().enabled = true;
             }
-            else
-            {
-
-            }
+            
             //if (chiave == true && premo pulsante I){ porta.GetComponent<Animator>.enabled=true; }
             //else {"Mi disp non hai la chiave"}
         }
@@ -34,5 +31,12 @@ public class OpenDoor : MonoBehaviour
 
         }
 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == player.name)
+        {
+            entrato = false;
+        }
     }
 }

@@ -16,9 +16,14 @@ public class KeyScript : MonoBehaviour
     private bool countdown = false;
     private bool startTimer=false;
     public float timer = 60;
+
+    public GameObject sugg;
+    public GameObject aspetta;
     
     void Start()
     {
+        sugg.active = false;
+        aspetta.active = false;
         if (GameStatus.GetCount() == true)
         {
             startTimer = true;
@@ -46,6 +51,17 @@ void Update()
 
         if (entered)
         {
+            if(startTimer == false)
+            {
+                sugg.active = true;
+                aspetta.active = false;
+            }
+            else
+            {
+                sugg.active = false;
+                aspetta.active = true;
+            }
+
             if (startTimer == false && Input.GetKeyDown(KeyCode.I)) {
 
 

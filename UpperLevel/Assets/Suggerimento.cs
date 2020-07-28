@@ -35,7 +35,7 @@ public class Suggerimento : MonoBehaviour
         if (coso.name == "principessinarig1")
         {
             sugg.active = false;
-            UnityEngine.Debug.Log("entrato");
+            UnityEngine.Debug.Log("uscito");
         }
 
     }

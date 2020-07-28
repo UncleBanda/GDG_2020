@@ -59,13 +59,18 @@ public class lancetta : MonoBehaviour
                 isMoving = false;
             }
         }
-        if(winningLancetta==true && bigRbool.winningBigR == true)
+        if(winningLancetta==true && bigRbool.winningBigR == true && GameStatus.GetGem()==true)
         {
             Debug.Log("FINE DEMO, VITTORIA");
             Rotellona.GetComponent<Animator>().enabled=true;
             Piattaforma.GetComponent<Animator>().enabled = true;
             fadeBlack.GetComponent<Animator>().enabled = true;
             FadeText.gameObject.SetActive(true);
+
+        }
+        if (winningLancetta == true && bigRbool.winningBigR == true && GameStatus.GetGem() == false)
+        {
+            //ti manca la gemma
 
         }
         if (isMoving == true)

@@ -12,6 +12,7 @@ public class GameStatus : MonoBehaviour
     static protected bool countdown = false;
     static protected bool countdownup = false;
     static protected bool raccolta = false;
+    static protected bool gem = false;
     // Start is called before the first frame update    
     void Start()
     {
@@ -77,6 +78,17 @@ public class GameStatus : MonoBehaviour
     public static bool GetTrovato()
     {
         return trovato;
+    }
+
+    public static void SetGem(bool value)
+    {
+        gem = value;
+        
+    }
+
+    public static bool GetGem()
+    {
+        return gem;
     }
 
     public static void SetCount(bool value)

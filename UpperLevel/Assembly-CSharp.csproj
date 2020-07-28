@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\GameStatus.cs" />
     <Compile Include="Assets\Scripts\GemScript.cs" />
     <Compile Include="Assets\Scripts\GemTutorial.cs" />
+    <Compile Include="Assets\Scripts\GemmaFinale.cs" />
     <Compile Include="Assets\Scripts\KeyScript.cs" />
     <Compile Include="Assets\Scripts\LeverActivate.cs" />
     <Compile Include="Assets\Scripts\LeverActivateDx.cs" />

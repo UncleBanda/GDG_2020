@@ -6,11 +6,16 @@ using UnityEngine;
 public class Suggerimento : MonoBehaviour
 {
     public GameObject sugg;
+    public GameObject sugg2;
 
     // Start is called before the first frame update
     void Start()
     {
         sugg.active = false;
+        if (sugg2 != null)
+        {
+            sugg2.active = false;
+        }
     }
 
     // Update is called once per frame
@@ -24,6 +29,11 @@ public class Suggerimento : MonoBehaviour
         if(coso.name == "principessinarig1")
         {
             sugg.active = true;
+            if (sugg2 != null)
+            {
+                sugg2.active = true;
+            }
+            
             UnityEngine.Debug.Log("entrato");
         }
         
@@ -35,6 +45,11 @@ public class Suggerimento : MonoBehaviour
         if (coso.name == "principessinarig1")
         {
             sugg.active = false;
+            if (sugg2 != null)
+            {
+                sugg2.active = false;
+            }
+
             UnityEngine.Debug.Log("uscito");
         }
 

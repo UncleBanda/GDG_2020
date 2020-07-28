@@ -17,6 +17,14 @@ public class StairsActivate : MonoBehaviour
     private bool isEntered;
     public AudioSource riproduci;
 
+    public GameObject sugg;
+    public GameObject suggI;
+    void Start()
+    {
+        sugg.active = false;
+        suggI.active = false;
+    }
+
     void Update()
     {
         if (isEntered == true)
@@ -48,17 +56,29 @@ public class StairsActivate : MonoBehaviour
     {
         if(other.name == p.name && isEntered==false)
         {
+            sugg.active = true;
             //mostra suggerimento: "Ti serve qualcoisa per azionare il meccanismo"
         }
         if (other.name == rotella.name)
         {
             isEntered = true;
+            sugg.active = false;
+            suggI.active = true;
+
         }
+        /*if (other.name == p.name && isEntered == true)
+        {
+            suggI.active = true;
+            sugg.active = false;
+            //mostra suggerimento: "Ti serve qualcoisa per azionare il meccanismo"
+        }*/
     }
     void OnTriggerExit(Collider other)
     {
         if (other.name == p.name)
         {
+            sugg.active = false;
+            suggI.active = false;
             //nascondi il suggerimento
         }
        

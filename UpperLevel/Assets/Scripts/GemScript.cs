@@ -19,7 +19,7 @@ public class GemScript : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.Rotate(0, 90 * Time.deltaTime, 0);
+        gameObject.transform.Rotate(0, 0, 90 * Time.deltaTime);
         
     }
     public void OnTriggerEnter(Collider other)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class lancetta : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class lancetta : MonoBehaviour
     public bool winningLancetta = false;
     public GameObject Rotellona;
     public GameObject Piattaforma;
+    public Image fadeBlack;
+    public GameObject FadeText;
 
     void Start()
     {
@@ -61,6 +64,9 @@ public class lancetta : MonoBehaviour
             Debug.Log("FINE DEMO, VITTORIA");
             Rotellona.GetComponent<Animator>().enabled=true;
             Piattaforma.GetComponent<Animator>().enabled = true;
+            fadeBlack.GetComponent<Animator>().enabled = true;
+            FadeText.gameObject.SetActive(true);
+
         }
         if (isMoving == true)
         {
@@ -82,4 +88,5 @@ public class lancetta : MonoBehaviour
     {
         isEntered = val;
     }
+
 }

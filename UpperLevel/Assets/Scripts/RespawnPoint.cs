@@ -51,6 +51,7 @@ public class RespawnPoint : MonoBehaviour
         motor.enabled = false;
         p.GetComponent<DeathEffect>().Die();
 
+
         virtualCamera.Follow = null;
         player.transform.position = respawnPoint.transform.position;
         }

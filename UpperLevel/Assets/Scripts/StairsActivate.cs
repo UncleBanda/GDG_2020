@@ -13,7 +13,7 @@ public class StairsActivate : MonoBehaviour
     public GameObject stairs3;
     public GameObject collider;
     public GameObject rotella;
-
+    public GameObject p;
     private bool isEntered;
     public AudioSource riproduci;
 
@@ -21,6 +21,7 @@ public class StairsActivate : MonoBehaviour
     {
         if (isEntered == true)
         {
+
             rotellaColonna.SetActive(true);
             Destroy(rotella);
 
@@ -45,9 +46,21 @@ public class StairsActivate : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(other.name == p.name && isEntered==false)
+        {
+            //mostra suggerimento: "Ti serve qualcoisa per azionare il meccanismo"
+        }
         if (other.name == rotella.name)
         {
             isEntered = true;
         }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.name == p.name)
+        {
+            //nascondi il suggerimento
+        }
+       
     }
 }

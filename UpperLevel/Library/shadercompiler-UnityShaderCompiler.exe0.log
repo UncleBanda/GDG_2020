@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 Base path: 'D:/Program Files/Unity/Editor/Data', plugins path 'D:/Program Files/Unity/Editor/Data/PlaybackEngines'
-=======
-Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
->>>>>>> 72726761bfc40fe6e60a4b7a5b57e6809dcfc066
 Cmd: initializeCompiler
 Cmd: preprocess
   insize=1579 outsize=233 ok=1
@@ -240,5 +236,3 @@ Cmd: preprocess
   insize=64469 outsize=3676 ok=1
 Cmd: preprocess
   insize=27779 outsize=1616 ok=1
-
-Quitting shader compiler process

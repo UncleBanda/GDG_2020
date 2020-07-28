@@ -45,6 +45,7 @@ public class dialogo : MonoBehaviour
         if (other.name == principessa.name)
         {
             isEntered = false;
+            sugg.active = false;
         }
     }
 }

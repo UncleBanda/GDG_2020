@@ -85,6 +85,8 @@ void Update()
         if (other.name == player.name)
         {
             entered = false;
+            sugg.active = false;
+            aspetta.active = false;
         }
     }
 }

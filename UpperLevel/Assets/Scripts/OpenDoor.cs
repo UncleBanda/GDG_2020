@@ -46,6 +46,7 @@ public class OpenDoor : MonoBehaviour
         if (other.name == player.name)
         {
             entrato = false;
+            sugg.active = false;
         }
     }
 }

@@ -164,6 +164,7 @@
     <Compile Include="Assets\Scripts\animCurve.cs" />
     <Compile Include="Assets\Scripts\costruttiva.cs" />
     <Compile Include="Assets\Scripts\dialogo.cs" />
+    <Compile Include="Assets\Scripts\doppio.cs" />
     <Compile Include="Assets\Scripts\downacid.cs" />
     <Compile Include="Assets\Scripts\generalLev.cs" />
     <Compile Include="Assets\Scripts\lancetta.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Assets\Scripts\playerMotor.cs" />
     <Compile Include="Assets\Scripts\playerMotorOld.cs" />
     <Compile Include="Assets\Scripts\stallPhase.cs" />
+    <Compile Include="Assets\Scripts\stopSugg.cs" />
     <Compile Include="Assets\Scripts\threelev.cs" />
     <Compile Include="Assets\SettingsMenu.cs" />
     <Compile Include="Assets\Suggerimento.cs" />

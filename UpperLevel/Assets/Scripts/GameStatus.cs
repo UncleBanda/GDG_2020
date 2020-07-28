@@ -10,6 +10,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField] static protected Vector3 respawnDown ;
     static protected bool trovato = false;
     static protected bool countdown = false;
+    static protected bool countdownup = false;
     static protected bool raccolta = false;
     // Start is called before the first frame update    
     void Start()
@@ -87,6 +88,17 @@ public class GameStatus : MonoBehaviour
     public static bool GetCount()
     {
         return countdown;
+    }
+
+    public static void SetCountUp(bool value)
+    {
+        countdownup = value;
+        
+    }
+
+    public static bool GetCountUp()
+    {
+        return countdownup;
     }
 
     public static void SetRaccolta(bool value)

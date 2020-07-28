@@ -96,7 +96,36 @@ public class playerMotor : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
+        if (jump)
+        {
 
+
+            if (rb.velocity.y < 0f && isGroundedBool == true)
+            {
+
+
+                //animator.SetTrigger("atterra");
+                jump = false;
+                UnityEngine.Debug.Log("asdas");
+
+
+
+
+            }
+            // facoltativo, se non piace togliamo
+            /* if (rb.velocity.y < 0f )
+             {
+
+
+                 //animator.SetTrigger("atterra");
+
+
+                 rb.AddForce(Vector3.up * -0.4f, ForceMode.Impulse);
+
+
+
+             }*/
+        }
         if (Input.GetButtonDown("Jump") && jump ==false )
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -111,36 +140,7 @@ public class playerMotor : MonoBehaviour
         }
         animator.SetBool("Atterra_bool",isGroundedBool);
 
-        if (jump)
-        {
-
-            
-            if (rb.velocity.y<0f && isGroundedBool==true)
-            {
-                
-                
-                //animator.SetTrigger("atterra");
-                jump = false;
-                UnityEngine.Debug.Log("asdas");
-                
-
-
-                
-            }
-            // facoltativo, se non piace togliamo
-           /* if (rb.velocity.y < 0f )
-            {
-
-
-                //animator.SetTrigger("atterra");
-                
-                
-                rb.AddForce(Vector3.up * -0.4f, ForceMode.Impulse);
-
-
-
-            }*/
-        }
+        
         //parte vecchia con il character controller 
         /*if (controller.isGrounded)
         {

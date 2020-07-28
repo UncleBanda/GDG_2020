@@ -17,6 +17,8 @@ public class LeverActivateDx : MonoBehaviour
     public int dx = 0;
     public float timer = 1.5f;
 
+    public AudioSource riproduci;
+    public AudioSource inceppato;
 
     private void Start()
     {
@@ -35,7 +37,7 @@ public class LeverActivateDx : MonoBehaviour
                 levaMiddle.GetComponent<Animator>().SetBool("TimeEnded", false);
                 levaDown.GetComponent<Animator>().enabled = true;
                 levaDown.GetComponent<Animator>().SetBool("TimeEnded", false);
-
+                riproduci.Play();
                 dx = 1;
                 start = true;
 
@@ -57,6 +59,7 @@ public class LeverActivateDx : MonoBehaviour
             levaUp.GetComponent<Animator>().SetBool("TimeEnded", true);
             levaMiddle.GetComponent<Animator>().SetBool("TimeEnded", true);
             levaDown.GetComponent<Animator>().SetBool("TimeEnded", true);
+            inceppato.Play();
         }
 
 

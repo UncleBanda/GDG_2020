@@ -64,7 +64,7 @@ public class playerMotor : MonoBehaviour
         float translation = horizontal * speed * Time.deltaTime;
 
         transform.Translate(Vector3.forward * Mathf.Abs(translation));
-
+        //rigid body movePosition
         /* if (salta == true)
          {
              saltoTime -= Time.deltaTime;
@@ -197,7 +197,7 @@ public class playerMotor : MonoBehaviour
         if (Physics.Raycast(Grounded3.transform.position, -Vector3.up, out hit3, 0.25f))
         {
             i++;
-
+           // hit3.transform.GetComponent<>
 
         }
         if (i >= 1)
@@ -213,5 +213,11 @@ public class playerMotor : MonoBehaviour
         // }
         // else return false;
     }
+    //get ground type function
 
+    //if type 
+    //is kinematic
+    //spostare del hit.distance raycast su y oppure raycast secondo piccolo dentro funzione
+    //lei figlia
+    //salto->transform.parent = null
 }

@@ -14,7 +14,7 @@ public class PlayerTimeManagement : MonoBehaviour
     public GameObject Background1;
     public GameObject Background2;
     public GameObject FillArea;
-
+    public GameObject filtro;
     public AudioSource riproduci;
 
     // Start is called before the first frame update
@@ -95,6 +95,7 @@ public class PlayerTimeManagement : MonoBehaviour
             {
                 
                 timemanager.ContinueTime();
+                filtro.SetActive(false);
 
             }
         }
@@ -111,12 +112,14 @@ public class PlayerTimeManagement : MonoBehaviour
         {
             UnityEngine.Debug.Log("go");
             timemanager.ContinueTime();
+            filtro.SetActive(false);
         }
         else
         {
             if (currentAbilityValue > 0)
             {
                 timemanager.StopTime();
+                filtro.SetActive(true);
 
             }
         }

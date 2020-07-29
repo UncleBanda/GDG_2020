@@ -186,6 +186,7 @@
     <Compile Include="Assets\Scripts\stallPhase.cs" />
     <Compile Include="Assets\Scripts\stopSugg.cs" />
     <Compile Include="Assets\Scripts\threelev.cs" />
+    <Compile Include="Assets\Scripts\verifica.cs" />
     <Compile Include="Assets\SettingsMenu.cs" />
     <Compile Include="Assets\Suggerimento.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

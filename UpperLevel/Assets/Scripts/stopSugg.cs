@@ -7,6 +7,7 @@ public class stopSugg : MonoBehaviour
 {
     public GameObject sugg;
     public GameObject release;
+    public GameObject sugg2;
     bool att=false;
 
     // Start is called before the first frame update
@@ -14,6 +15,10 @@ public class stopSugg : MonoBehaviour
     {
         sugg.active = false;
         release.active = false;
+        if (sugg2 != null)
+        {
+            sugg2.active = false;
+        }
     }
 
     // Update is called once per frame
@@ -26,6 +31,10 @@ public class stopSugg : MonoBehaviour
     {
         if (coso.name == "principessinarig1")
         {
+            if (sugg2 != null)
+            {
+                sugg2.active = true;
+            }
             if (att == false)
             {
                sugg.active = true;
@@ -57,7 +66,13 @@ public class stopSugg : MonoBehaviour
             sugg.active = false;
             release.active = false;
             UnityEngine.Debug.Log("uscito");
+
+            if (sugg2 != null)
+            {
+                sugg2.active = false;
+            }
         }
+        
 
     }
 }

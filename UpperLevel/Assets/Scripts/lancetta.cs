@@ -22,12 +22,14 @@ public class lancetta : MonoBehaviour
     public Image fadeBlack;
     public GameObject FadeText;
 
+    
+
     void Start()
     {
         UnityEngine.Debug.Log("" + slider.maxValue);
         slider = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeSceneManager>().slider;
 
-
+        
     }
 
     // Update is called once per frame
@@ -59,18 +61,25 @@ public class lancetta : MonoBehaviour
                 isMoving = false;
             }
         }
-        if(winningLancetta==true && bigRbool.winningBigR == true && GameStatus.GetGem()==true)
+        if((winningLancetta==true && bigRbool.winningBigR == true || GameStatus.GetPuzzle() )  && GameStatus.GetGem()==true)
         {
             Debug.Log("FINE DEMO, VITTORIA");
-            Rotellona.GetComponent<Animator>().enabled=true;
+            /*Rotellona.GetComponent<Animator>().enabled=true;
+            Piattaforma.GetComponent<Animator>().enabled = true;*/
+           /* fadeBlack.GetComponent<Animator>().enabled = true;
+            FadeText.gameObject.SetActive(true);*/
+            GameStatus.SetPuzzle(true);
+            Rotellona.GetComponent<Animator>().enabled = true;
             Piattaforma.GetComponent<Animator>().enabled = true;
-            fadeBlack.GetComponent<Animator>().enabled = true;
-            FadeText.gameObject.SetActive(true);
 
         }
-        if (winningLancetta == true && bigRbool.winningBigR == true && GameStatus.GetGem() == false)
+        if ((winningLancetta == true && bigRbool.winningBigR == true ) && GameStatus.GetGem() == false)
         {
             //ti manca la gemma
+            GameStatus.SetPuzzle(true);
+            Rotellona.GetComponent<Animator>().enabled = true;
+            Piattaforma.GetComponent<Animator>().enabled = true;
+
 
         }
         if (isMoving == true)

@@ -13,6 +13,7 @@ public class GameStatus : MonoBehaviour
     static protected bool countdownup = false;
     static protected bool raccolta = false;
     static protected bool gem = false;
+    static protected bool puzzle = false;
     // Start is called before the first frame update    
     void Start()
     {
@@ -100,6 +101,17 @@ public class GameStatus : MonoBehaviour
     public static bool GetCount()
     {
         return countdown;
+    }
+
+    public static void SetPuzzle(bool value)
+    {
+        puzzle = value;
+        
+    }
+
+    public static bool GetPuzzle()
+    {
+        return puzzle;
     }
 
     public static void SetCountUp(bool value)

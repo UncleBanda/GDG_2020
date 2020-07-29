@@ -8,12 +8,17 @@ public class doppio : MonoBehaviour
     public GameObject erim;
     private GameObject principessa;
     public bool isEntered;
+    public GameObject sugg2;
     // Start is called before the first frame update
     void Start()
     {
         principessa = GameObject.Find("principessinarig1");
         sugg.active = false;
         erim.active = false;
+        if (sugg2 != null)
+        {
+            sugg2.active = false;
+        }
     }
 
     // Update is called once per frame
@@ -23,17 +28,29 @@ public class doppio : MonoBehaviour
         {
             sugg.active = true;
             UnityEngine.Debug.Log("sdfdsfs");
+            if (sugg2 != null)
+            {
+                sugg2.active = true;
+            }
 
         }
         else if (Input.GetKeyDown(KeyCode.I) && isEntered && sugg.active == true && erim.active ==false)
         {
             sugg.active = false;
             erim.active = true;
+            if (sugg2 != null)
+            {
+                sugg2.active = true;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.I) && sugg.active == false && erim.active == true)
         {
             sugg.active = false;
             erim.active = false;
+            if (sugg2 != null)
+            {
+                sugg2.active = false;
+            }
         }
 
     }
@@ -55,6 +72,10 @@ public class doppio : MonoBehaviour
             isEntered = false;
             sugg.active = false;
             erim.active = false;
+            if (sugg2 != null)
+            {
+                sugg2.active = false;
+            }
         }
     }
 }

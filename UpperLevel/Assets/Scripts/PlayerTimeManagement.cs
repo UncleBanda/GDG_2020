@@ -95,7 +95,8 @@ public class PlayerTimeManagement : MonoBehaviour
             {
                 
                 timemanager.ContinueTime();
-                filtro.SetActive(false);
+                riproduci.Play();
+                //filtro.active = false;
 
             }
         }
@@ -112,14 +113,14 @@ public class PlayerTimeManagement : MonoBehaviour
         {
             UnityEngine.Debug.Log("go");
             timemanager.ContinueTime();
-            filtro.SetActive(false);
+           // filtro.active = false;
         }
         else
         {
             if (currentAbilityValue > 0)
             {
                 timemanager.StopTime();
-                filtro.SetActive(true);
+               // filtro.active = true;
 
             }
         }
